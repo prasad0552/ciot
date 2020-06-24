@@ -454,7 +454,7 @@ class Vtiger_Record_Model extends Vtiger_Base_Model
                     'orgname' => $imageOriginalName,
                     'path' => $imagePath . $imageId,
                     'name' => $imageName,
-                    'url' => $site_URL . $url
+                    'url' => $site_URL . '/' . $url
                 );
             }
         }
