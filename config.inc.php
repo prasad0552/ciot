@@ -79,12 +79,12 @@ $dbconfigoption['ssl'] = false;
 
 $host_name = $dbconfig['db_hostname'];
 
-$site_URL = 'http://127.0.0.1/ciot-app/';
+$site_URL = 'http://127.0.0.1/ciot/';
 
 // url for customer portal (Example: http://vtiger.com/portal)
 $PORTAL_URL = $site_URL.'/customerportal';
 // root directory path
-$root_directory = 'C:/Program Files/Ampps/www/ciot-app/';
+$root_directory = '/var/www/html/ciot/';
 
 // cache direcory path
 $cache_dir = 'cache/';
