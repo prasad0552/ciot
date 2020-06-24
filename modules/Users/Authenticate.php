@@ -114,7 +114,13 @@ if($focus->is_authenticated()) {
 		$user = $focus->retrieve_entity_info($focus->id, 'Users');
 		$isFirstUser = Users_CRMSetup::isFirstUser($user);
 		if($isFirstUser) {
-			header('Location: index.php?module=Users&action=UserSetup');
+			$arr = $_SESSION['lastpage'];
+			if(isset($_SESSION['lastpage'])) {
+				header("Location: $successURL".$arr);
+			} else {
+				header("Location: $successURL");
+			}
+//			header('Location: index.php?module=Users&action=UserSetup');
 		} else {
 			$arr = $_SESSION['lastpage'];
 			if(isset($_SESSION['lastpage'])) {
