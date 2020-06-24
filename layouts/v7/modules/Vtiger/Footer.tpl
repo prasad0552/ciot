@@ -8,9 +8,9 @@
 ************************************************************************************}
 
 <footer class="app-footer">
-{*	<p>*}
-{*		Powered by sciltech - ©{date('Y')}*}
-{*	</p>*}
+	<p>
+		Powered by sciltech - ©{date('Y')}
+	</p>
 </footer>
 </div>
 <div id='overlayPage'>
