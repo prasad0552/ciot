@@ -79,7 +79,7 @@ $dbconfigoption['ssl'] = false;
 
 $host_name = $dbconfig['db_hostname'];
 
-$site_URL = 'http://127.0.0.1/ciot/';
+$site_URL = 'http://ec2-13-235-33-70.ap-south-1.compute.amazonaws.com';
 
 // url for customer portal (Example: http://vtiger.com/portal)
 $PORTAL_URL = $site_URL.'/customerportal';
