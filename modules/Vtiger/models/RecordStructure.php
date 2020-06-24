@@ -20,7 +20,8 @@ class Vtiger_RecordStructure_Model extends Vtiger_Base_Model {
 	const RECORD_STRUCTURE_MODE_DEFAULT = '';
 	const RECORD_STRUCTURE_MODE_DETAIL = 'Detail';
 	const RECORD_STRUCTURE_MODE_EDIT = 'Edit';
-	const RECORD_STRUCTURE_MODE_QUICKCREATE = 'QuickCreate';
+    const RECORD_STRUCTURE_MODE_CREATE = 'Create';
+    const RECORD_STRUCTURE_MODE_QUICKCREATE = 'QuickCreate';
 	const RECORD_STRUCTURE_MODE_MASSEDIT = 'MassEdit';
 	const RECORD_STRUCTURE_MODE_SUMMARY = 'Summary';
 	const RECORD_STRUCTURE_MODE_FILTER = 'Filter';

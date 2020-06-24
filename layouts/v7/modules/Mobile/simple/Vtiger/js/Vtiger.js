@@ -57,7 +57,7 @@ mobileapp.controller('VtigerBodyController', function ($scope, $api, $mdUtil, $m
     });
     
     $scope.loadList = function(module){
-        window.location.href = "index.php?module="+module+"&view=List&app="+$scope.selectedApp;
+        window.location.href = "index.php?module="+module+"&view=List";
         $scope.pageTitle = module;
     };
 

@@ -266,7 +266,8 @@ class Vtiger_Field extends Vtiger_FieldBasic {
 		$queryParams = Array($moduleInstance->id);
 
 		$result = $adb->pquery($query, $queryParams);
-		for($index = 0; $index < $adb->num_rows($result); ++$index) {
+
+        for($index = 0; $index < $adb->num_rows($result); ++$index) {
 			$instance = new self();
 			$instance->initialize($adb->fetch_array($result), $moduleInstance);
 			$instances[] = $instance;

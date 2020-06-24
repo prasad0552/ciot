@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2020-05-11 14:41:10
+<?php /* Smarty version Smarty-3.1.7, created on 2020-06-09 07:36:25
          compiled from "C:\Program Files\Ampps\www\ciot-app\includes\runtime/../../layouts/v7\modules\Vtiger\partials\SidebarAppMenu.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:5606091345eb9601f74b2a1-47223390%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a0bace21f847cef459bb120f973ca860a19e6c6d' => 
     array (
       0 => 'C:\\Program Files\\Ampps\\www\\ciot-app\\includes\\runtime/../../layouts/v7\\modules\\Vtiger\\partials\\SidebarAppMenu.tpl',
-      1 => 1588544652,
+      1 => 1591688057,
       2 => 'file',
     ),
   ),
@@ -87,7 +87,6 @@ $_smarty_tpl->tpl_vars['APP_MENU_MODEL']->_loop = true;
 " data-app-name="<?php echo $_smarty_tpl->tpl_vars['APP_NAME']->value;?>
 " id="<?php echo $_smarty_tpl->tpl_vars['APP_NAME']->value;?>
 _modules_dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-default-url="<?php echo $_smarty_tpl->tpl_vars['FIRST_MENU_MODEL']->value->getDefaultUrl();?>
-&app=<?php echo $_smarty_tpl->tpl_vars['APP_NAME']->value;?>
 ">
 							<div class="menu-items-wrapper app-menu-items-wrapper">
 								<span class="app-icon-list fa <?php echo $_smarty_tpl->tpl_vars['APP_IMAGE_MAP']->value[$_smarty_tpl->tpl_vars['APP_NAME']->value];?>
@@ -109,7 +108,6 @@ $_smarty_tpl->tpl_vars['moduleModel']->_loop = true;
 								<?php $_smarty_tpl->tpl_vars['translatedModuleLabel'] = new Smarty_variable(vtranslate($_smarty_tpl->tpl_vars['moduleModel']->value->get('label'),$_smarty_tpl->tpl_vars['moduleName']->value), null, 0);?>
 								<li>
 									<a href="<?php echo $_smarty_tpl->tpl_vars['moduleModel']->value->getDefaultUrl();?>
-&app=<?php echo $_smarty_tpl->tpl_vars['APP_NAME']->value;?>
 " title="<?php echo $_smarty_tpl->tpl_vars['translatedModuleLabel']->value;?>
 ">
 										<span class="module-icon"><?php echo $_smarty_tpl->tpl_vars['moduleModel']->value->getModuleIcon();?>

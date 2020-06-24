@@ -16,7 +16,7 @@
 		{assign var='translatedModuleLabel' value=vtranslate($moduleModel->get('label'),$moduleName )}
 		<ul title="{$translatedModuleLabel}" class="module-qtip">
 			<li {if $MODULE eq $moduleName}class="active"{else}class=""{/if}>
-				<a href="{$moduleModel->getDefaultUrl()}&app={$SELECTED_MENU_CATEGORY}">
+				<a href="{$moduleModel->getDefaultUrl()}">
 					{$moduleModel->getModuleIcon()}
 					<span>{$translatedModuleLabel}</span>
 				</a>

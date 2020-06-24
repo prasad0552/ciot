@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2020-05-11 14:41:42
+<?php /* Smarty version Smarty-3.1.7, created on 2020-06-09 07:36:28
          compiled from "C:\Program Files\Ampps\www\ciot-app\includes\runtime/../../layouts/v7\modules\Vtiger\ListViewContents.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:14534529335eb96426d4ec96-63448804%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '81974098cc4c7eeb17a7eccb865471e302ae4c82' => 
     array (
       0 => 'C:\\Program Files\\Ampps\\www\\ciot-app\\includes\\runtime/../../layouts/v7\\modules\\Vtiger\\ListViewContents.tpl',
-      1 => 1589188824,
+      1 => 1591687779,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.7',
+  'unifunc' => 'content_5eb96426f3c0a',
   'variables' => 
   array (
     'MODULE' => 0,
@@ -74,8 +76,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'SINGLE_MODULE' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.7',
-  'unifunc' => 'content_5eb96426f3c0a',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5eb96426f3c0a')) {function content_5eb96426f3c0a($_smarty_tpl) {?>
 
@@ -266,7 +266,6 @@ $_smarty_tpl->tpl_vars['LISTVIEW_ENTRY']->_loop = true;
 						<?php }?>
 						<tr class="listViewEntries" data-id='<?php echo $_smarty_tpl->tpl_vars['DATA_ID']->value;?>
 ' data-recordUrl='<?php echo $_smarty_tpl->tpl_vars['DATA_URL']->value;?>
-&app=<?php echo $_smarty_tpl->tpl_vars['SELECTED_MENU_CATEGORY']->value;?>
 ' id="<?php echo $_smarty_tpl->tpl_vars['MODULE']->value;?>
 _listView_row_<?php echo $_smarty_tpl->getVariable('smarty')->value['foreach']['listview']['index']+1;?>
 " <?php if ($_smarty_tpl->tpl_vars['MODULE']->value=='Calendar'){?>data-recurring-enabled='<?php echo $_smarty_tpl->tpl_vars['LISTVIEW_ENTRY']->value->isRecurringEnabled();?>
@@ -299,7 +298,6 @@ $_smarty_tpl->tpl_vars['LISTVIEW_HEADER']->_loop = true;
 								<span class="value">
 									<?php if (($_smarty_tpl->tpl_vars['LISTVIEW_HEADER']->value->isNameField()==true||$_smarty_tpl->tpl_vars['LISTVIEW_HEADER']->value->get('uitype')=='4')&&$_smarty_tpl->tpl_vars['MODULE_MODEL']->value->isListViewNameFieldNavigationEnabled()==true){?>
 										<a href="<?php echo $_smarty_tpl->tpl_vars['LISTVIEW_ENTRY']->value->getDetailViewUrl();?>
-&app=<?php echo $_smarty_tpl->tpl_vars['SELECTED_MENU_CATEGORY']->value;?>
 "><?php echo $_smarty_tpl->tpl_vars['LISTVIEW_ENTRY']->value->get($_smarty_tpl->tpl_vars['LISTVIEW_HEADERNAME']->value);?>
 </a>
 										<?php if ($_smarty_tpl->tpl_vars['MODULE']->value=='Products'&&$_smarty_tpl->tpl_vars['LISTVIEW_ENTRY']->value->isBundle()){?>

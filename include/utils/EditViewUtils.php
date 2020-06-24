@@ -24,6 +24,7 @@ require_once('include/database/PearDatabase.php');
 require_once('include/ComboUtil.php'); //new
 require_once('include/utils/CommonUtils.php'); //new
 require_once 'modules/PickList/DependentPickListUtils.php';
+require_once 'modules/PickList/DependentFieldUtils.php';
 
 /** This function returns the vtiger_invoice object populated with the details from sales order object.
 * Param $focus - Invoice object

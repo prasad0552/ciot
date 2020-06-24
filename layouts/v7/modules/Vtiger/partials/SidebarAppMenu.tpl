@@ -40,7 +40,7 @@
 								{break}
 							{/if}
 						{/foreach}
-						<div class="menu-item app-item dropdown-toggle app-item-color-{$APP_NAME}" data-app-name="{$APP_NAME}" id="{$APP_NAME}_modules_dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-default-url="{$FIRST_MENU_MODEL->getDefaultUrl()}&app={$APP_NAME}">
+						<div class="menu-item app-item dropdown-toggle app-item-color-{$APP_NAME}" data-app-name="{$APP_NAME}" id="{$APP_NAME}_modules_dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-default-url="{$FIRST_MENU_MODEL->getDefaultUrl()}">
 							<div class="menu-items-wrapper app-menu-items-wrapper">
 								<span class="app-icon-list fa {$APP_IMAGE_MAP.$APP_NAME}"></span>
 								<span class="app-name textOverflowEllipsis"> {vtranslate("LBL_$APP_NAME")}</span>
@@ -51,7 +51,7 @@
 							{foreach item=moduleModel key=moduleName from=$APP_GROUPED_MENU[$APP_NAME]}
 								{assign var='translatedModuleLabel' value=vtranslate($moduleModel->get('label'),$moduleName )}
 								<li>
-									<a href="{$moduleModel->getDefaultUrl()}&app={$APP_NAME}" title="{$translatedModuleLabel}">
+									<a href="{$moduleModel->getDefaultUrl()}" title="{$translatedModuleLabel}">
 										<span class="module-icon">{$moduleModel->getModuleIcon()}</span>
 										<span class="module-name textOverflowEllipsis"> {$translatedModuleLabel}</span>
 									</a>

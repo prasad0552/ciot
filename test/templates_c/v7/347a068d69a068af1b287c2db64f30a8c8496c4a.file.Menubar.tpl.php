@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2020-05-11 14:41:41
+<?php /* Smarty version Smarty-3.1.7, created on 2020-06-09 07:36:27
          compiled from "C:\Program Files\Ampps\www\ciot-app\includes\runtime/../../layouts/v7\modules\Vtiger\partials\Menubar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:16095141285eb964251de539-48759721%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '347a068d69a068af1b287c2db64f30a8c8496c4a' => 
     array (
       0 => 'C:\\Program Files\\Ampps\\www\\ciot-app\\includes\\runtime/../../layouts/v7\\modules\\Vtiger\\partials\\Menubar.tpl',
-      1 => 1572909986,
+      1 => 1591687910,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.7',
+  'unifunc' => 'content_5eb9642525793',
   'variables' => 
   array (
     'MENU_STRUCTURE' => 0,
@@ -23,11 +25,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'moduleName' => 0,
     'translatedModuleLabel' => 0,
     'MODULE' => 0,
-    'SELECTED_MENU_CATEGORY' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.7',
-  'unifunc' => 'content_5eb9642525793',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5eb9642525793')) {function content_5eb9642525793($_smarty_tpl) {?>
 
@@ -48,7 +47,6 @@ $_smarty_tpl->tpl_vars['moduleModel']->_loop = true;
 " class="module-qtip">
 			<li <?php if ($_smarty_tpl->tpl_vars['MODULE']->value==$_smarty_tpl->tpl_vars['moduleName']->value){?>class="active"<?php }else{ ?>class=""<?php }?>>
 				<a href="<?php echo $_smarty_tpl->tpl_vars['moduleModel']->value->getDefaultUrl();?>
-&app=<?php echo $_smarty_tpl->tpl_vars['SELECTED_MENU_CATEGORY']->value;?>
 ">
 					<?php echo $_smarty_tpl->tpl_vars['moduleModel']->value->getModuleIcon();?>
 

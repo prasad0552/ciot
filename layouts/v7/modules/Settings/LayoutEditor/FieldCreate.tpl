@@ -193,6 +193,30 @@
 							<div class="row">
 								<div class="form-group col-sm-7">
 									<label class="control-label fieldLabel col-sm-10">
+										<i class="fa fa-exclamation-circle"></i> &nbsp; {vtranslate('LBL_CREATE_VIEW',$QUALIFIED_MODULE)}
+									</label>
+									<div class="controls col-sm-2">
+										<input type="hidden" name="createview" value="1"/>
+										<label class="checkbox" style="margin-left: 6%;">
+											<input type="checkbox" name="createview" class="cursorPointer" value="2" {if $FIELD_MODEL->get('createview') eq '2'} checked="checked" {/if}/>
+										</label>
+									</div>
+								</div>
+								<div class="form-group col-sm-6">
+									<label class="control-label fieldLabel col-sm-7">
+										<i class="fa fa-plus"></i>&nbsp;&nbsp;{vtranslate('LBL_EDIT_VIEW',$QUALIFIED_MODULE)}
+									</label>
+									<div class="controls col-sm-5">
+										<input type="hidden" name="editview" value="1"/>
+										<label class="checkbox" style="margin-left: 9%;">
+											<input type="checkbox" class="cursorPointer" name="editview" value="2" {if ($FIELD_MODEL->get('editview') eq '2')} checked="checked"{/if}/>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-sm-7">
+									<label class="control-label fieldLabel col-sm-10">
 										<i class="fa fa-key"></i> &nbsp; {vtranslate('LBL_KEY_FIELD_VIEW',$QUALIFIED_MODULE)}
 									</label>
 									<div class="controls col-sm-2">

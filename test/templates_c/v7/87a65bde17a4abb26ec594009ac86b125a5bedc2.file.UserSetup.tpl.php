@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2020-05-11 14:23:57
+<?php /* Smarty version Smarty-3.1.7, created on 2020-05-20 15:28:30
          compiled from "C:\Program Files\Ampps\www\ciot-app\includes\runtime/../../layouts/v7\modules\Users\UserSetup.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:5942443025eb95ffdb6d9f2-73387445%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '87a65bde17a4abb26ec594009ac86b125a5bedc2' => 
     array (
       0 => 'C:\\Program Files\\Ampps\\www\\ciot-app\\includes\\runtime/../../layouts/v7\\modules\\Users\\UserSetup.tpl',
-      1 => 1572909986,
+      1 => 1589988504,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.7',
+  'unifunc' => 'content_5eb95ffdc605a',
   'variables' => 
   array (
     'CURRENT_USER_MODEL' => 0,
@@ -29,8 +31,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'time_zone' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.7',
-  'unifunc' => 'content_5eb95ffdc605a',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5eb95ffdc605a')) {function content_5eb95ffdc605a($_smarty_tpl) {?>
 
@@ -53,7 +53,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					});
 				});
 				</script><style type="text/css">
-					body { background: #ffffff url('layouts/v7/skins/images/usersetupbg.png') no-repeat center top; background-size: 100%; font-size: 14px; }
+					body { background: #ffffff no-repeat center top; background-size: 100%; font-size: 14px; }
 					.modal-backdrop { opacity: 0.35; }
 					.tooltip { z-index: 1055; }
 					input, select, textarea { font-size: 14px; }
@@ -105,4 +105,5 @@ $_smarty_tpl->tpl_vars['time_zone']->_loop = true;
 </option><?php } ?></select><div style="padding-top:10px;"></div></div><div class="controls"><select name="date_format" id="date_format" style="width:250px;" placeholder="<?php echo vtranslate('LBL_DATE_FORMAT',$_smarty_tpl->tpl_vars['MODULE']->value);?>
 " data-errormessage="<?php echo vtranslate('LBL_CHOOSE_DATE_FORMAT',$_smarty_tpl->tpl_vars['MODULE']->value);?>
 " class="validate[required]"><option value=""></option><option value="dd-mm-yyyy" <?php if ($_smarty_tpl->tpl_vars['CURRENT_USER_MODEL']->value->get('date_format')=="dd-mm-yyyy"){?> selected<?php }?>>dd-mm-yyyy</option><option value="mm-dd-yyyy" <?php if ($_smarty_tpl->tpl_vars['CURRENT_USER_MODEL']->value->get('date_format')=="mm-dd-yyyy"){?> selected<?php }?>>mm-dd-yyyy</option><option value="yyyy-mm-dd" <?php if ($_smarty_tpl->tpl_vars['CURRENT_USER_MODEL']->value->get('date_format')=="yyyy-mm-dd"){?> selected<?php }?>>yyyy-mm-dd</option></select><div style="padding-top:10px;"></div></div></div></div></div><div class="modal-footer"><button class="btn btn-success" type="submit"><?php echo vtranslate('LBL_GET_STARTED',$_smarty_tpl->tpl_vars['MODULE']->value);?>
-</button></div></div></form></div></body></html><?php }} ?>
+</button></div></div></form></div></body></html>
+<?php }} ?>

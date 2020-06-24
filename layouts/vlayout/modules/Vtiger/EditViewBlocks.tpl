@@ -17,6 +17,9 @@
             {if !empty($PICKIST_DEPENDENCY_DATASOURCE)}
                 <input type="hidden" name="picklistDependency" value='{Vtiger_Util_Helper::toSafeHTML($PICKIST_DEPENDENCY_DATASOURCE)}' />
             {/if}
+    {if !empty($FIELD_DEPENDENCY_DATASOURCE)}
+        <input type="hidden" name="fieldDependency" value='{Vtiger_Util_Helper::toSafeHTML($FIELD_DEPENDENCY_DATASOURCE)}'/>
+    {/if}
             {assign var=QUALIFIED_MODULE_NAME value={$MODULE}}
             {assign var=IS_PARENT_EXISTS value=strpos($MODULE,":")}
             {if $IS_PARENT_EXISTS}

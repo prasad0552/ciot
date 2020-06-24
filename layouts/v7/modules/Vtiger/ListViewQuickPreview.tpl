@@ -29,7 +29,7 @@
 
             <div class="quickPreviewActions clearfix">
                 <div class="btn-group pull-left">
-                    <button class="btn btn-success btn-xs" onclick="window.location.href = '{$RECORD->getFullDetailViewUrl()}&app={$SELECTED_MENU_CATEGORY}'">
+                    <button class="btn btn-success btn-xs" onclick="window.location.href = '{$RECORD->getFullDetailViewUrl()}'">
                        {vtranslate('LBL_VIEW_DETAILS', $MODULE_NAME)} 
                     </button>
                 </div>

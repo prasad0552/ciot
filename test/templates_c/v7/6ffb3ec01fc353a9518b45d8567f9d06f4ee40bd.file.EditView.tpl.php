@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2020-05-11 14:42:04
+<?php /* Smarty version Smarty-3.1.7, created on 2020-06-09 09:15:38
          compiled from "C:\Program Files\Ampps\www\ciot-app\includes\runtime/../../layouts/v7\modules\Vtiger\EditView.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:544545815eb9643c802754-93010953%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6ffb3ec01fc353a9518b45d8567f9d06f4ee40bd' => 
     array (
       0 => 'C:\\Program Files\\Ampps\\www\\ciot-app\\includes\\runtime/../../layouts/v7\\modules\\Vtiger\\EditView.tpl',
-      1 => 1572909986,
+      1 => 1591687730,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.7',
+  'unifunc' => 'content_5eb9643c88c55',
   'variables' => 
   array (
     'MODULE' => 0,
@@ -25,7 +27,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'USER_MODEL' => 0,
     'IS_PARENT_EXISTS' => 0,
     'SPLITTED_MODULE' => 0,
-    'SELECTED_MENU_CATEGORY' => 0,
     'IS_RELATION_OPERATION' => 0,
     'SOURCE_MODULE' => 0,
     'SOURCE_RECORD' => 0,
@@ -48,8 +49,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'DUPLICATE_RECORDS' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.7',
-  'unifunc' => 'content_5eb9643c88c55',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5eb9643c88c55')) {function content_5eb9643c88c55($_smarty_tpl) {?>
 
@@ -69,8 +68,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 " /><?php }?><input type="hidden" name="action" value="Save" /><input type="hidden" name="record" value="<?php echo $_smarty_tpl->tpl_vars['RECORD_ID']->value;?>
 " /><input type="hidden" name="defaultCallDuration" value="<?php echo $_smarty_tpl->tpl_vars['USER_MODEL']->value->get('callduration');?>
 " /><input type="hidden" name="defaultOtherEventDuration" value="<?php echo $_smarty_tpl->tpl_vars['USER_MODEL']->value->get('othereventduration');?>
-" /><input type="hidden" name="appName" value="&app=<?php echo $_smarty_tpl->tpl_vars['SELECTED_MENU_CATEGORY']->value;?>
-" /><?php if ($_smarty_tpl->tpl_vars['IS_RELATION_OPERATION']->value){?><input type="hidden" name="sourceModule" value="<?php echo $_smarty_tpl->tpl_vars['SOURCE_MODULE']->value;?>
+" /><input type="hidden" name="appName" value="" /><?php if ($_smarty_tpl->tpl_vars['IS_RELATION_OPERATION']->value){?><input type="hidden" name="sourceModule" value="<?php echo $_smarty_tpl->tpl_vars['SOURCE_MODULE']->value;?>
 " /><input type="hidden" name="sourceRecord" value="<?php echo $_smarty_tpl->tpl_vars['SOURCE_RECORD']->value;?>
 " /><input type="hidden" name="relationOperation" value="<?php echo $_smarty_tpl->tpl_vars['IS_RELATION_OPERATION']->value;?>
 " /><?php }?><?php if ($_smarty_tpl->tpl_vars['RETURN_VIEW']->value){?><input type="hidden" name="returnmodule" value="<?php echo $_smarty_tpl->tpl_vars['RETURN_MODULE']->value;?>
@@ -92,4 +90,5 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 " /><?php }?><?php echo $_smarty_tpl->getSubTemplate (vtemplate_path("partials/EditViewContents.tpl",$_smarty_tpl->tpl_vars['MODULE']->value), $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 </div></div><div class='modal-overlay-footer clearfix'><div class="row clearfix"><div class='textAlignCenter col-lg-12 col-md-12 col-sm-12 '><button type='submit' class='btn btn-success saveButton' ><?php echo vtranslate('LBL_SAVE',$_smarty_tpl->tpl_vars['MODULE']->value);?>
 </button>&nbsp;&nbsp;<a class='cancelLink' href="javascript:history.<?php if ($_smarty_tpl->tpl_vars['DUPLICATE_RECORDS']->value){?>go(-2)<?php }else{ ?>back()<?php }?>" type="reset"><?php echo vtranslate('LBL_CANCEL',$_smarty_tpl->tpl_vars['MODULE']->value);?>
-</a></div></div></div></form></div></div></div><?php }} ?>
+</a></div></div></div></form></div></div></div>
+<?php }} ?>

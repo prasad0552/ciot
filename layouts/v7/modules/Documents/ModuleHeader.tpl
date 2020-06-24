@@ -25,7 +25,7 @@
 						{assign var=DEFAULT_FILTER_URL value=$MODULE_MODEL->getListViewUrlWithAllFilter()}
 					{/if}
 				{/if}
-				<a title="{vtranslate($MODULE, $MODULE)}" href='{$DEFAULT_FILTER_URL}&app={$SELECTED_MENU_CATEGORY}'><h4 class="module-title pull-left textOverflowEllipsis text-uppercase">&nbsp;{vtranslate($MODULE, $MODULE)}&nbsp;</h4></a>
+				<a title="{vtranslate($MODULE, $MODULE)}" href='{$DEFAULT_FILTER_URL}'><h4 class="module-title pull-left textOverflowEllipsis text-uppercase">&nbsp;{vtranslate($MODULE, $MODULE)}&nbsp;</h4></a>
 				{if $smarty.session.lvs.$MODULE.viewname}
 					{assign var=VIEWID value=$smarty.session.lvs.$MODULE.viewname}
 				{/if}

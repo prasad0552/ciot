@@ -84,6 +84,9 @@
 				<form id="detailView" data-name-fields='{ZEND_JSON::encode($MODULE_MODEL->getNameFields())}' method="POST">
                                     {if !empty($PICKLIST_DEPENDENCY_DATASOURCE)} 
                                         <input type="hidden" name="picklistDependency" value="{Vtiger_Util_Helper::toSafeHTML($PICKLIST_DEPENDENCY_DATASOURCE)}"> 
-                                    {/if} 
+                                    {/if}
+					{if !empty($FIELD_DEPENDENCY_DATASOURCE)}
+						<input type="hidden" name="fieldDependency" value='{Vtiger_Util_Helper::toSafeHTML($FIELD_DEPENDENCY_DATASOURCE)}'/>
+					{/if}
 					<div class="contents">
 {/strip}

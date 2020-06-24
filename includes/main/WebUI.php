@@ -55,6 +55,7 @@ class Vtiger_WebUI extends Vtiger_EntryPoint {
 		$moduleName = $request->getModule();
 		$moduleModel = Vtiger_Module_Model::getInstance($moduleName);
 
+//		exit($moduleModel);
 		if (empty($moduleModel)) {
 			throw new AppException(vtranslate('LBL_HANDLER_NOT_FOUND'));
 		}

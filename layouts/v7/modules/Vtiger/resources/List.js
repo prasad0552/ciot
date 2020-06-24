@@ -2387,7 +2387,7 @@ Vtiger.Class("Vtiger_List_Js", {
 								app.helper.showSuccessNotification({message: res.message});
 								app.helper.hideModal();
 								var appName = app.getAppName();
-								var url = res['listviewurl'] + '&app=' + appName;
+								var url = res['listviewurl'];
 								window.location.href = url;
 							}
 						});

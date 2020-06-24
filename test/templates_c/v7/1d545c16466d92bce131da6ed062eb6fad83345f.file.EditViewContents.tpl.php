@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2020-05-11 14:42:04
+<?php /* Smarty version Smarty-3.1.7, created on 2020-05-22 05:36:33
          compiled from "C:\Program Files\Ampps\www\ciot-app\includes\runtime/../../layouts/v7\modules\Vtiger\partials\EditViewContents.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:8792353925eb9643cd12b52-37296908%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1d545c16466d92bce131da6ed062eb6fad83345f' => 
     array (
       0 => 'C:\\Program Files\\Ampps\\www\\ciot-app\\includes\\runtime/../../layouts/v7\\modules\\Vtiger\\partials\\EditViewContents.tpl',
-      1 => 1572909986,
+      1 => 1590125776,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.7',
+  'unifunc' => 'content_5eb9643cdeb00',
   'variables' => 
   array (
     'PICKIST_DEPENDENCY_DATASOURCE' => 0,
+    'FIELD_DEPENDENCY_DATASOURCE' => 0,
     'DUPLICATE_RECORDS' => 0,
     'MODULE' => 0,
     'RECORD_STRUCTURE' => 0,
@@ -37,12 +40,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'FILE_LOCATION_TYPE_FIELD' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.7',
-  'unifunc' => 'content_5eb9643cdeb00',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5eb9643cdeb00')) {function content_5eb9643cdeb00($_smarty_tpl) {?>
 <?php if (!empty($_smarty_tpl->tpl_vars['PICKIST_DEPENDENCY_DATASOURCE']->value)){?><input type="hidden" name="picklistDependency" value='<?php echo Vtiger_Util_Helper::toSafeHTML($_smarty_tpl->tpl_vars['PICKIST_DEPENDENCY_DATASOURCE']->value);?>
-' /><?php }?><div name='editContent'><?php if ($_smarty_tpl->tpl_vars['DUPLICATE_RECORDS']->value){?><div class="fieldBlockContainer duplicationMessageContainer"><div class="duplicationMessageHeader"><b><?php echo vtranslate('LBL_DUPLICATES_DETECTED',$_smarty_tpl->tpl_vars['MODULE']->value);?>
+' /><?php }?><?php if (!empty($_smarty_tpl->tpl_vars['FIELD_DEPENDENCY_DATASOURCE']->value)){?><input type="hidden" name="fieldDependency" value='<?php echo Vtiger_Util_Helper::toSafeHTML($_smarty_tpl->tpl_vars['FIELD_DEPENDENCY_DATASOURCE']->value);?>
+'/><?php }?><div name='editContent'><?php if ($_smarty_tpl->tpl_vars['DUPLICATE_RECORDS']->value){?><div class="fieldBlockContainer duplicationMessageContainer"><div class="duplicationMessageHeader"><b><?php echo vtranslate('LBL_DUPLICATES_DETECTED',$_smarty_tpl->tpl_vars['MODULE']->value);?>
 </b></div><div><?php echo getDuplicatesPreventionMessage($_smarty_tpl->tpl_vars['MODULE']->value,$_smarty_tpl->tpl_vars['DUPLICATE_RECORDS']->value);?>
 </div></div><?php }?><?php  $_smarty_tpl->tpl_vars['BLOCK_FIELDS'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['BLOCK_FIELDS']->_loop = false;
  $_smarty_tpl->tpl_vars['BLOCK_LABEL'] = new Smarty_Variable;

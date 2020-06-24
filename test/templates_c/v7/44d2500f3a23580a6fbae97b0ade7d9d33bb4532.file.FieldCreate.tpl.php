@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2020-05-11 16:41:01
+<?php /* Smarty version Smarty-3.1.7, created on 2020-06-09 10:24:07
          compiled from "C:\Program Files\Ampps\www\ciot-app\includes\runtime/../../layouts/v7\modules\Settings\LayoutEditor\FieldCreate.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:3133998295eb9801d8a8b59-88066601%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '44d2500f3a23580a6fbae97b0ade7d9d33bb4532' => 
     array (
       0 => 'C:\\Program Files\\Ampps\\www\\ciot-app\\includes\\runtime/../../layouts/v7\\modules\\Settings\\LayoutEditor\\FieldCreate.tpl',
-      1 => 1572909986,
+      1 => 1591698239,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.7',
+  'unifunc' => 'content_5eb9801d9ccc1',
   'variables' => 
   array (
     'IS_FIELD_EDIT_MODE' => 0,
@@ -41,8 +43,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'NEW_FIELDS_INFO' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.7',
-  'unifunc' => 'content_5eb9801d9ccc1',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5eb9801d9ccc1')) {function content_5eb9801d9ccc1($_smarty_tpl) {?>
 
@@ -101,7 +101,9 @@ $_smarty_tpl->tpl_vars['RELATION_MODULE_NAME']->_loop = true;
 </label><div class="controls col-sm-2"><input type="hidden" name="mandatory" value="O"/><label class="checkbox" style="margin-left: 6%;"><input type="checkbox" name="mandatory" class="<?php if ($_smarty_tpl->tpl_vars['FIELD_MODEL']->value->isMandatoryOptionDisabled()){?> cursorPointerNotAllowed <?php }else{ ?> cursorPointer<?php }?>" value="M" <?php if ($_smarty_tpl->tpl_vars['FIELD_MODEL']->value->isMandatory()){?> checked="checked" <?php }?><?php if ($_smarty_tpl->tpl_vars['FIELD_MODEL']->value->isMandatoryOptionDisabled()){?>readonly="readonly"<?php }?>/></label></div></div><div class="form-group col-sm-6"><label class="control-label fieldLabel col-sm-7"><i class="fa fa-plus"></i>&nbsp;&nbsp;<?php echo vtranslate('LBL_QUICK_CREATE',$_smarty_tpl->tpl_vars['QUALIFIED_MODULE']->value);?>
 </label><div class="controls col-sm-5"><?php if ($_smarty_tpl->tpl_vars['FIELD_MODEL']->value->isQuickCreateOptionDisabled()){?><input type="hidden" name="quickcreate" value=<?php echo $_smarty_tpl->tpl_vars['FIELD_MODEL']->value->get('quickcreate');?>
  /><?php }else{ ?><input type="hidden" name="quickcreate" value="1" /><?php }?><?php $_smarty_tpl->tpl_vars["IS_QUICKCREATE_SUPPORTED"] = new Smarty_variable(($_smarty_tpl->tpl_vars['FIELD_MODEL']->value->getModule()->isQuickCreateSupported()), null, 0);?><input type="hidden" name="isquickcreatesupported" value="<?php echo $_smarty_tpl->tpl_vars['IS_QUICKCREATE_SUPPORTED']->value;?>
-"><label class="checkbox" style="margin-left: 9%;"><input type="checkbox" class="<?php if ($_smarty_tpl->tpl_vars['FIELD_MODEL']->value->isMandatory()||$_smarty_tpl->tpl_vars['FIELD_MODEL']->value->isQuickCreateOptionDisabled()){?> cursorPointerNotAllowed <?php }else{ ?> cursorPointer<?php }?>" name="quickcreate" value="2" <?php if (($_smarty_tpl->tpl_vars['FIELD_MODEL']->value->get('quickcreate')=='2'||$_smarty_tpl->tpl_vars['FIELD_MODEL']->value->isMandatory())&&$_smarty_tpl->tpl_vars['IS_QUICKCREATE_SUPPORTED']->value){?> checked="checked"<?php }?><?php if ($_smarty_tpl->tpl_vars['FIELD_MODEL']->value->isMandatory()||$_smarty_tpl->tpl_vars['FIELD_MODEL']->value->isQuickCreateOptionDisabled()){?>readonly="readonly"<?php }?>/></label></div></div></div><div class="row"><div class="form-group col-sm-7"><label class="control-label fieldLabel col-sm-10"><i class="fa fa-key"></i> &nbsp; <?php echo vtranslate('LBL_KEY_FIELD_VIEW',$_smarty_tpl->tpl_vars['QUALIFIED_MODULE']->value);?>
+"><label class="checkbox" style="margin-left: 9%;"><input type="checkbox" class="<?php if ($_smarty_tpl->tpl_vars['FIELD_MODEL']->value->isMandatory()||$_smarty_tpl->tpl_vars['FIELD_MODEL']->value->isQuickCreateOptionDisabled()){?> cursorPointerNotAllowed <?php }else{ ?> cursorPointer<?php }?>" name="quickcreate" value="2" <?php if (($_smarty_tpl->tpl_vars['FIELD_MODEL']->value->get('quickcreate')=='2'||$_smarty_tpl->tpl_vars['FIELD_MODEL']->value->isMandatory())&&$_smarty_tpl->tpl_vars['IS_QUICKCREATE_SUPPORTED']->value){?> checked="checked"<?php }?><?php if ($_smarty_tpl->tpl_vars['FIELD_MODEL']->value->isMandatory()||$_smarty_tpl->tpl_vars['FIELD_MODEL']->value->isQuickCreateOptionDisabled()){?>readonly="readonly"<?php }?>/></label></div></div></div><div class="row"><div class="form-group col-sm-7"><label class="control-label fieldLabel col-sm-10"><i class="fa fa-exclamation-circle"></i> &nbsp; <?php echo vtranslate('LBL_CREATE_VIEW',$_smarty_tpl->tpl_vars['QUALIFIED_MODULE']->value);?>
+</label><div class="controls col-sm-2"><input type="hidden" name="createview" value="1"/><label class="checkbox" style="margin-left: 6%;"><input type="checkbox" name="createview" class="cursorPointer" value="2" <?php if ($_smarty_tpl->tpl_vars['FIELD_MODEL']->value->get('createview')=='2'){?> checked="checked" <?php }?>/></label></div></div><div class="form-group col-sm-6"><label class="control-label fieldLabel col-sm-7"><i class="fa fa-plus"></i>&nbsp;&nbsp;<?php echo vtranslate('LBL_EDIT_VIEW',$_smarty_tpl->tpl_vars['QUALIFIED_MODULE']->value);?>
+</label><div class="controls col-sm-5"><input type="hidden" name="editview" value="1"/><label class="checkbox" style="margin-left: 9%;"><input type="checkbox" class="cursorPointer" name="editview" value="2" <?php if (($_smarty_tpl->tpl_vars['FIELD_MODEL']->value->get('editview')=='2')){?> checked="checked"<?php }?>/></label></div></div></div><div class="row"><div class="form-group col-sm-7"><label class="control-label fieldLabel col-sm-10"><i class="fa fa-key"></i> &nbsp; <?php echo vtranslate('LBL_KEY_FIELD_VIEW',$_smarty_tpl->tpl_vars['QUALIFIED_MODULE']->value);?>
 </label><div class="controls col-sm-2"><input type="hidden" name="summaryfield" value="0"/><label class="checkbox" style="margin-left: 6%;"><input type="checkbox" class="<?php if ($_smarty_tpl->tpl_vars['FIELD_MODEL']->value->isSummaryFieldOptionDisabled()){?> cursorPointerNotAllowed <?php }else{ ?> cursorPointer<?php }?>" name="summaryfield" value="1" <?php if ($_smarty_tpl->tpl_vars['FIELD_MODEL']->value->get('summaryfield')=='1'){?>checked="checked"<?php }?><?php if ($_smarty_tpl->tpl_vars['FIELD_MODEL']->value->isSummaryFieldOptionDisabled()){?>readonly="readonly"<?php }?> /></label></div></div><div class="form-group col-sm-6"><label class="control-label fieldLabel col-sm-7"><i class="fa fa-flag-o"></i> &nbsp; <span><?php echo vtranslate('LBL_HEADER_FIELD',$_smarty_tpl->tpl_vars['QUALIFIED_MODULE']->value);?>
 </span></label><div class="controls col-sm-5"><input type="hidden" name="headerfield" value="0"/><label class="checkbox" style="margin-left: 9%;"><input type="checkbox" class="<?php if ($_smarty_tpl->tpl_vars['FIELD_MODEL']->value->isHeaderFieldOptionDisabled()){?> cursorPointerNotAllowed <?php }else{ ?> cursorPointer<?php }?>" name="headerfield" value="1" <?php if ($_smarty_tpl->tpl_vars['FIELD_MODEL']->value->get('headerfield')=='1'){?>checked="checked"<?php }?><?php if ($_smarty_tpl->tpl_vars['FIELD_MODEL']->value->isHeaderFieldOptionDisabled()||$_smarty_tpl->tpl_vars['IS_NAME_FIELD']->value){?>readonly="readonly"<?php }?> /></label></div></div></div><div class="row"><div class="form-group col-sm-7"><label class="control-label fieldLabel col-sm-10"><img src="<?php echo vimage_path('MassEdit.png');?>
 " height=14 width=14/> &nbsp; <?php echo vtranslate('LBL_MASS_EDIT',$_smarty_tpl->tpl_vars['QUALIFIED_MODULE']->value);?>
@@ -109,4 +111,5 @@ $_smarty_tpl->tpl_vars['RELATION_MODULE_NAME']->_loop = true;
  /><?php }else{ ?><input type="hidden" name="masseditable" value="2" /><?php }?><label class="checkbox" style="margin-left: 6%;"><input type="checkbox" class="<?php if ($_smarty_tpl->tpl_vars['FIELD_MODEL']->value->isMassEditOptionDisabled()){?> cursorPointerNotAllowed <?php }else{ ?> cursorPointer<?php }?>" name="masseditable" value="1" <?php if ($_smarty_tpl->tpl_vars['FIELD_MODEL']->value->get('masseditable')=='1'){?>checked="checked" <?php }?><?php if ($_smarty_tpl->tpl_vars['FIELD_MODEL']->value->isMassEditOptionDisabled()){?>readonly="readonly"<?php }?>/></label></div></div></div></div></div></div><?php echo $_smarty_tpl->getSubTemplate (vtemplate_path('ModalFooter.tpl','Vtiger'), $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 </form></div><?php if ($_smarty_tpl->tpl_vars['FIELDS_INFO']->value!='[]'){?><script type="text/javascript">var uimeta = (function () {var fieldInfo = <?php echo $_smarty_tpl->tpl_vars['FIELDS_INFO']->value;?>
 ;var newFieldInfo = <?php echo $_smarty_tpl->tpl_vars['NEW_FIELDS_INFO']->value;?>
-;return {field: {get: function (name, property) {if (name && property === undefined) {return fieldInfo[name];}if (name && property) {return fieldInfo[name][property]}},isMandatory: function (name) {if (fieldInfo[name]) {return fieldInfo[name].mandatory;}return false;},getType: function (name) {if (fieldInfo[name]) {return fieldInfo[name].type}return false;},getNewFieldInfo: function () {if (newFieldInfo['newfieldinfo']) {return newFieldInfo['newfieldinfo']}return false;}},};})();</script><?php }?></div><?php }} ?>
+;return {field: {get: function (name, property) {if (name && property === undefined) {return fieldInfo[name];}if (name && property) {return fieldInfo[name][property]}},isMandatory: function (name) {if (fieldInfo[name]) {return fieldInfo[name].mandatory;}return false;},getType: function (name) {if (fieldInfo[name]) {return fieldInfo[name].type}return false;},getNewFieldInfo: function () {if (newFieldInfo['newfieldinfo']) {return newFieldInfo['newfieldinfo']}return false;}},};})();</script><?php }?></div>
+<?php }} ?>

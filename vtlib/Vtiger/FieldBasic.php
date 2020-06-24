@@ -36,6 +36,8 @@ class Vtiger_FieldBasic {
 	var	$maximumlength = 100;
 	var	$sequence      = false;
 	var	$quickcreate   = 1;
+	var	$createview   = 1;
+	var	$editview   = 1;
 	var	$quicksequence = false;
 	var	$info_type     = 'BAS';
 	var $isunique = false;
@@ -71,6 +73,8 @@ class Vtiger_FieldBasic {
 		$this->presence      = $valuemap['presence'];
 		$this->defaultvalue  = $valuemap['defaultvalue'];
 		$this->quickcreate = $valuemap['quickcreate'];
+		$this->createview = $valuemap['createview'];
+		$this->editview = $valuemap['editview'];
 		$this->sequence = $valuemap['sequence'];
 		$this->summaryfield = $valuemap['summaryfield'];
 		$this->isunique = $valuemap['isunique'];

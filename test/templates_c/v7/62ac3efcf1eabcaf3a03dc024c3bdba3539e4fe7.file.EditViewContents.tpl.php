@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2020-05-11 16:44:02
+<?php /* Smarty version Smarty-3.1.7, created on 2020-06-10 09:52:26
          compiled from "C:\Program Files\Ampps\www\ciot-app\includes\runtime/../../layouts/v7\modules\Users\partials\EditViewContents.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18956312055eb960951c5447-51094292%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ac3efcf1eabcaf3a03dc024c3bdba3539e4fe7' => 
     array (
       0 => 'C:\\Program Files\\Ampps\\www\\ciot-app\\includes\\runtime/../../layouts/v7\\modules\\Users\\partials\\EditViewContents.tpl',
-      1 => 1588590968,
+      1 => 1590125776,
       2 => 'file',
     ),
   ),
@@ -20,6 +20,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'PICKIST_DEPENDENCY_DATASOURCE' => 0,
+    'FIELD_DEPENDENCY_DATASOURCE' => 0,
     'RECORD_STRUCTURE' => 0,
     'BLOCK_LABEL' => 0,
     'BLOCK_FIELDS' => 0,
@@ -35,7 +36,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5eb9609522a2e')) {function content_5eb9609522a2e($_smarty_tpl) {?>
 <?php if (!empty($_smarty_tpl->tpl_vars['PICKIST_DEPENDENCY_DATASOURCE']->value)){?><input type="hidden" name="picklistDependency" value='<?php echo Vtiger_Util_Helper::toSafeHTML($_smarty_tpl->tpl_vars['PICKIST_DEPENDENCY_DATASOURCE']->value);?>
-' /><?php }?><div name='editContent'><?php  $_smarty_tpl->tpl_vars['BLOCK_FIELDS'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['BLOCK_FIELDS']->_loop = false;
+' /><?php }?><?php if (!empty($_smarty_tpl->tpl_vars['FIELD_DEPENDENCY_DATASOURCE']->value)){?><input type="hidden" name="fieldDependency" value='<?php echo Vtiger_Util_Helper::toSafeHTML($_smarty_tpl->tpl_vars['FIELD_DEPENDENCY_DATASOURCE']->value);?>
+'/><?php }?><div name='editContent'><?php  $_smarty_tpl->tpl_vars['BLOCK_FIELDS'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['BLOCK_FIELDS']->_loop = false;
  $_smarty_tpl->tpl_vars['BLOCK_LABEL'] = new Smarty_Variable;
  $_from = $_smarty_tpl->tpl_vars['RECORD_STRUCTURE']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['BLOCK_FIELDS']->key => $_smarty_tpl->tpl_vars['BLOCK_FIELDS']->value){

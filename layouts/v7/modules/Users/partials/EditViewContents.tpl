@@ -13,6 +13,9 @@
 {if !empty($PICKIST_DEPENDENCY_DATASOURCE)}
     <input type="hidden" name="picklistDependency" value='{Vtiger_Util_Helper::toSafeHTML($PICKIST_DEPENDENCY_DATASOURCE)}' />
 {/if}
+{if !empty($FIELD_DEPENDENCY_DATASOURCE)}
+    <input type="hidden" name="fieldDependency" value='{Vtiger_Util_Helper::toSafeHTML($FIELD_DEPENDENCY_DATASOURCE)}'/>
+{/if}
 <div name='editContent'>
     {foreach key=BLOCK_LABEL item=BLOCK_FIELDS from=$RECORD_STRUCTURE name=blockIterator}
 		{if $BLOCK_LABEL neq 'LBL_CALENDAR_SETTINGS'}

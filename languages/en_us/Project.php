@@ -16,6 +16,8 @@ $languageStrings = array(
 
 	// Blocks
 	'LBL_PROJECT_INFORMATION' => 'Activity Details',
+    'LBL_REQUESTER_FIELDS_NURSERY' => 'Request Details (Nursery)',
+    'LBL_REQUESTER_FIELDS_TRAIL' => 'Request Details (Trail)',
 
 	//Field Labels
 	'Project Name' => 'Activity Name',

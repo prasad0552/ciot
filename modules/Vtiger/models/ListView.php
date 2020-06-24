@@ -142,6 +142,7 @@ class Vtiger_ListView_Model extends Vtiger_Base_Model {
 		$module = $this->getModule();
 		$headerFieldModels = array();
 		$headerFields = $listViewContoller->getListViewHeaderFields();
+
 		foreach($headerFields as $fieldName => $webserviceField) {
 			if($webserviceField && !in_array($webserviceField->getPresence(), array(0,2))) continue;
 			if($webserviceField && $webserviceField->parentReferenceField && !in_array($webserviceField->parentReferenceField->getPresence(), array(0,2))){

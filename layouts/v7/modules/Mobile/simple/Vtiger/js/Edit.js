@@ -181,7 +181,7 @@ mobileapp.controller('VtigerEditController', function ($scope, $api, $mdToast, $
                 //split the ws id to get actual record id to fetch.
                 var id = r.record.id.split('x')[1];
                 var toast = $mdToast.simple().content('Record Saved Successfully!').position($scope.getToastPosition()).hideDelay(1000);
-                window.location.href = "index.php?module="+$scope.module+"&view=Detail&record="+id+"&app="+$scope.selectedApp;
+                window.location.href = "index.php?module="+$scope.module+"&view=Detail&record="+id;
             } else {
 				var message = 'Some thing went wrong ! \n Save is not Succesfull.';
 				if (e.message) {
@@ -189,7 +189,7 @@ mobileapp.controller('VtigerEditController', function ($scope, $api, $mdToast, $
 				}
                 var toast = $mdToast.simple().content(message).position($scope.getToastPosition()).hideDelay(1000);
                 $mdToast.show(toast);
-                //window.location.href = "index.php?module="+$scope.module+"&view=List&app="+$scope.selectedApp;
+                //window.location.href = "index.php?module="+$scope.module+"&view=List";
             }
         });
     };

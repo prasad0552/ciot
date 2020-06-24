@@ -10,8 +10,8 @@
     
 {strip}
 <div class="dashBoardContainer clearfix">
-{*        <div class="tabContainer">*}
-{*            <ul class="nav nav-tabs tabs sortable container-fluid">*}
+        <div class="tabContainer">
+            <ul class="nav nav-tabs tabs sortable container-fluid">
 {*                {foreach key=index item=TAB_DATA from=$DASHBOARD_TABS}*}
 {*                    <li class="{if $TAB_DATA["id"] eq $SELECTED_TAB}active{/if} dashboardTab" data-tabid="{$TAB_DATA["id"]}" data-tabname="{$TAB_DATA["tabname"]}">*}
 {*                        <a data-toggle="tab" href="#tab_{$TAB_DATA["id"]}">*}
@@ -41,16 +41,16 @@
 {*                    </div>*}
 {*                    <button class="btn-success updateSequence pull-right hide">{vtranslate('LBL_SAVE_ORDER',$MODULE)}</button>*}
 {*                </div>*}
-{*            </ul>*}
-{*            <div class="tab-content">*}
-{*                {foreach key=index item=TAB_DATA from=$DASHBOARD_TABS}*}
-{*                    <div id="tab_{$TAB_DATA["id"]}" data-tabid="{$TAB_DATA["id"]}" data-tabname="{$TAB_DATA["tabname"]}" class="tab-pane fade {if $TAB_DATA["id"] eq $SELECTED_TAB}in active{/if}">*}
-{*                        {if $TAB_DATA["id"] eq $SELECTED_TAB}*}
-{*                            {include file="dashboards/DashBoardTabContents.tpl"|vtemplate_path:$MODULE TABID=$TABID}*}
-{*                        {/if}*}
-{*                    </div>*}
-{*                {/foreach}*}
-{*            </div>*}
-{*        </div>*}
+            </ul>
+            <div class="tab-content">
+                {foreach key=index item=TAB_DATA from=$DASHBOARD_TABS}
+                    <div id="tab_{$TAB_DATA["id"]}" data-tabid="{$TAB_DATA["id"]}" data-tabname="{$TAB_DATA["tabname"]}" class="tab-pane fade {if $TAB_DATA["id"] eq $SELECTED_TAB}in active{/if}">
+                        {if $TAB_DATA["id"] eq $SELECTED_TAB}
+                            {include file="dashboards/DashBoardTabContents.tpl"|vtemplate_path:$MODULE TABID=$TABID}
+                        {/if}
+                    </div>
+                {/foreach}
+            </div>
+        </div>
 </div>
 {/strip}

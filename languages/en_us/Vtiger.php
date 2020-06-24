@@ -63,6 +63,8 @@ $languageStrings = array(
 	'LBL_MASS_EDITING' => 'Mass Editing',
 	'LBL_DESELECT_ALL_RECORDS' => 'Deselect Records in all Pages',
 	'LBL_QUICK_CREATE' => 'Quick Create',
+//    'LBL_CREATE_VIEW' => 'Create Create',
+    'LBL_EDIT_VIEW' => 'Edit View',
 	'LBL_QUICK_EDIT' => 'Quick Edit',
 	'LBL_SEND_EMAIL' => 'Send Email',
 	//SEND EMAIL translations

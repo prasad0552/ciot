@@ -153,7 +153,10 @@ class Vtiger_Detail_View extends Vtiger_Index_View {
 		$picklistDependencyDatasource = Vtiger_DependencyPicklist::getPicklistDependencyDatasource($moduleName);
 		$viewer->assign('PICKIST_DEPENDENCY_DATASOURCE', Vtiger_Functions::jsonEncode($picklistDependencyDatasource));
 
-		$tagsList = Vtiger_Tag_Model::getAllAccessible($currentUserModel->getId(), $moduleName, $recordId);
+        $fieldDependencyDatasource = Vtiger_DependencyField::getFieldDependencyDatasource($moduleName);
+        $viewer->assign('FIELD_DEPENDENCY_DATASOURCE',Vtiger_Functions::jsonEncode($fieldDependencyDatasource));
+
+        $tagsList = Vtiger_Tag_Model::getAllAccessible($currentUserModel->getId(), $moduleName, $recordId);
 		$allUserTags = Vtiger_Tag_Model::getAllUserTags($currentUserModel->getId());
 		$viewer->assign('TAGS_LIST', $tagsList);
 		$viewer->assign('ALL_USER_TAGS', $allUserTags);

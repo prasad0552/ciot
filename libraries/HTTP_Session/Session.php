@@ -13,7 +13,7 @@
  *
  * PHP version 4
  *
- * LICENSE: This source file is subject to version 3.0 of the PHP license
+ * LICENSE: This source file is startsubject to version 3.0 of the PHP license
  * that is available through the world-wide-web at the following URI:
  * http://www.php.net/license/3_0.txt.  If you did not receive a copy of
  * the PHP License and are unable to obtain it through the web, please
@@ -112,8 +112,8 @@ class HTTP_Session
      * those supplied by PHP sessions is preferred.
      * i.e. Storing the session data in a local database.
      *
-     * @param string $container         Container name
-     * @param array  $container_options Container options
+     * @param string $container Container name
+     * @param array $container_options Container options
      *
      * @static
      * @access public
@@ -122,7 +122,7 @@ class HTTP_Session
      */
     function setContainer($container, $container_options = null)
     {
-        $container_class     = 'HTTP_Session_Container_' . $container;
+        $container_class = 'HTTP_Session_Container_' . $container;
         $container_classfile = 'HTTP/Session/Container/' . $container . '.php';
 
         include_once $container_classfile;
@@ -140,7 +140,7 @@ class HTTP_Session
      * You can provide your own name and/or id for a session.
      *
      * @param string $name string Name of a session, default is 'SessionID'
-     * @param string $id   string Id of a session which will be used
+     * @param string $id string Id of a session which will be used
      *                            only when the session is new
      *
      * @static
@@ -158,7 +158,12 @@ class HTTP_Session
         } elseif (is_null(HTTP_Session::detectID())) {
             HTTP_Session::id($id ? $id : uniqid(dechex(rand())));
         }
-        session_start();
+        //----------- START ITS4YOU TRACY IMPLEMENTATION -----------
+        $sessionid = session_id();
+        if (empty($sessionid)) {
+            session_start();
+        }
+        //----------- END ITS4YOU TRACY IMPLEMENTATION -----------
         if (!isset($_SESSION['__HTTP_Session_Info'])) {
             $_SESSION['__HTTP_Session_Info'] = HTTP_SESSION_STARTED;
         } else {
@@ -253,7 +258,7 @@ class HTTP_Session
      * This function copies session data of specified id to specified table
      *
      * @param string $targetTable Table to replicate data to
-     * @param string $id          ID of the session
+     * @param string $id ID of the session
      *
      * @static
      * @access public
@@ -267,10 +272,10 @@ class HTTP_Session
     /**
      * Free all session variables
      *
+     * @return void
      * @todo   TODO Save expire and idle timestamps?
      * @static
      * @access public
-     * @return void
      */
     function clear()
     {
@@ -337,7 +342,7 @@ class HTTP_Session
      * Sets the maximum expire time
      *
      * @param integer $time Time in seconds
-     * @param bool    $add  Add time to current expire time or not
+     * @param bool $add Add time to current expire time or not
      *
      * @static
      * @access public
@@ -366,8 +371,8 @@ class HTTP_Session
      * between requests before the session-state
      * provider terminates the session.
      *
-     * @param int  $time Time in seconds
-     * @param bool $add  Add time to current maximum idle time or not
+     * @param int $time Time in seconds
+     * @param bool $add Add time to current maximum idle time or not
      *
      * @static
      * @access public
@@ -399,7 +404,7 @@ class HTTP_Session
             return 0;
         } else {
             return $_SESSION['__HTTP_Session_Idle_TS'] +
-                   $_SESSION['__HTTP_Session_Idle'];
+                $_SESSION['__HTTP_Session_Idle'];
         }
     }
 
@@ -431,7 +436,7 @@ class HTTP_Session
     {
         if (isset($_SESSION['__HTTP_Session_Idle_TS']) &&
             (($_SESSION['__HTTP_Session_Idle_TS'] +
-              $_SESSION['__HTTP_Session_Idle']) < time())) {
+                    $_SESSION['__HTTP_Session_Idle']) < time())) {
             return true;
         } else {
             return false;
@@ -502,11 +507,11 @@ class HTTP_Session
      *
      * @param string $name Name of a global variable
      *
+     * @return bool
      * @deprecated Use set()/setRef() instead
      *
      * @static
      * @access public
-     * @return bool
      * @see    session_register()
      */
     function register($name)
@@ -519,11 +524,11 @@ class HTTP_Session
      *
      * @param string $name Name of a global variable
      *
+     * @return bool
      * @deprecated Use get()/getRef() instead
      *
      * @static
      * @access public
-     * @return bool
      * @see    session_unregister()
      */
     function unregister($name)
@@ -536,11 +541,11 @@ class HTTP_Session
      *
      * @param string $name Variable name
      *
+     * @return bool
      * @deprecated Use is_set() instead
      *
      * @static
      * @access public
-     * @return bool
      */
     function registered($name)
     {
@@ -550,8 +555,8 @@ class HTTP_Session
     /**
      * Returns session variable
      *
-     * @param string $name    Name of a variable
-     * @param mixed  $default Default value of a variable if not set
+     * @param string $name Name of a variable
+     * @param mixed $default Default value of a variable if not set
      *
      * @static
      * @access public
@@ -589,8 +594,8 @@ class HTTP_Session
     /**
      * Sets session variable
      *
-     * @param string $name  Name of a variable
-     * @param mixed  $value Value of a variable
+     * @param string $name Name of a variable
+     * @param mixed $value Value of a variable
      *
      * @static
      * @access public
@@ -610,8 +615,8 @@ class HTTP_Session
     /**
      * Sets session variable by reference
      *
-     * @param string $name  Name of a variable
-     * @param mixed  $value Value of a variable
+     * @param string $name Name of a variable
+     * @param mixed $value Value of a variable
      *
      * @static
      * @access public
@@ -645,8 +650,8 @@ class HTTP_Session
      *
      * Two scripts can have local variables with the same names
      *
-     * @param string $name    Name of a variable
-     * @param mixed  $default Default value of a variable if not set
+     * @param string $name Name of a variable
+     * @param mixed $default Default value of a variable if not set
      *
      * @static
      * @access public
@@ -668,8 +673,8 @@ class HTTP_Session
      * Sets local variable of a script.
      * Two scripts can have local variables with the same names.
      *
-     * @param string $name  Name of a local variable
-     * @param mixed  $value Value of a local variable
+     * @param string $name Name of a local variable
+     * @param mixed $value Value of a local variable
      *
      * @static
      * @access public
@@ -682,7 +687,7 @@ class HTTP_Session
             $_SESSION[$local] = array();
         }
         $return = (isset($_SESSION[$local][$name])) ? $_SESSION[$local][$name]
-                                                    : null;
+            : null;
 
         if (null === $value) {
             unset($_SESSION[$local][$name]);
@@ -704,7 +709,7 @@ class HTTP_Session
     function localName($name = null)
     {
         $return = (isset($GLOBALS['__HTTP_Session_Localname'])) ? $GLOBALS['__HTTP_Session_Localname']
-                                                                : null;
+            : null;
 
         if (!empty($name)) {
             $GLOBALS['__HTTP_Session_Localname'] = $name;
@@ -790,9 +795,9 @@ class HTTP_Session
     function setGcProbability($gcProbability = null)
     {
         $return = ini_get('session.gc_probability');
-        if (isset($gcProbability)  &&
+        if (isset($gcProbability) &&
             is_int($gcProbability) &&
-            $gcProbability >= 1    &&
+            $gcProbability >= 1 &&
             $gcProbability <= 100) {
             ini_set('session.gc_probability', $gcProbability);
         }
