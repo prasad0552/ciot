@@ -9,20 +9,20 @@
  *************************************************************************************/
 $languageStrings = array(
 	// Basic Strings
-	'SINGLE_ProjectTask' => 'Project Task',
-	'LBL_ADD_RECORD' => 'Add Project Task',
-	'LBL_RECORDS_LIST' => 'Project Task List',
+	'SINGLE_ProjectTask' => 'Activity Task',
+	'LBL_ADD_RECORD' => 'Add Activity Task',
+	'LBL_RECORDS_LIST' => 'Activity Task List',
 
 	// Blocks
-	'LBL_PROJECT_TASK_INFORMATION' => 'Project Task Details',
-	'LBL_PROJECTS_LIST' => 'Projects List',
+	'LBL_PROJECT_TASK_INFORMATION' => 'Activity Task Details',
+	'LBL_PROJECTS_LIST' => 'Activities List',
 	'LBL_TASKS_LIST' => 'Tasks List',
     'LBL_MILESTONES_LIST' => 'Milestones List',
 	
 	//Field Labels
-	'Project Task Name' => 'Project Task Name',
-    'Project Task No' => 'Project Task No',
-    'Project Task Number' => 'Project Task Number',
+	'Project Task Name' => 'Activity Task Name',
+    'Project Task No' => 'Activity Task No',
+    'Project Task Number' => 'Activity Task Number',
 	'Status' => 'Status',
 	'Priority' => 'Priority',
     'Progress' => 'Progress',

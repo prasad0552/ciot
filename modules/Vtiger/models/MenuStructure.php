@@ -234,7 +234,7 @@ class Vtiger_MenuStructure_Model extends Vtiger_Base_Model {
 	}
 
 	public static function getAppIcons() {
-		$appImageIcons = array(	'MARKETING' => 'fa-users',
+		$appImageIcons = array(	'MARKETING' => 'fa-briefcase',
 								'SALES'		=> 'fa-dot-circle-o',
 								'SUPPORT'	=> 'fa-life-ring',
 								'INVENTORY'	=> 'vicon-inventory',

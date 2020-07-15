@@ -23,4 +23,9 @@ $languageStrings = array(
 'Heat screening'	=>	'Heat screening',
 'Cold tolerance'	=>	'Cold tolerance',
 'Photo period sensitivity'	=>	'Photo period sensitivity',
+'Seed Increase (Varietal- Trialing)'	=>	'Seed Increase (Varietal- Trialing)',
+'Hybrid Seed Production'	=>	'Hybrid Seed Production',
+'Seed Increase- Nucleus'	=>	'Seed Increase- Nucleus',
+'Seed Increase- Breeder'	=>	'Seed Increase- Breeder',
+'Seed Increase -Larger quantity'	=>	'Seed Increase -Larger quantity',
 );

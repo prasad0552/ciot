@@ -11,7 +11,7 @@ $languageStrings = array(
 	// Basic Strings
 	'Project'=>'Activities',
 	'SINGLE_Project' => 'Activity',
-	'LBL_ADD_RECORD' => 'Add Activity',
+	'LBL_ADD_RECORD' => 'Create Activity',
 	'LBL_RECORDS_LIST' => 'Activity List',
 
 	// Blocks
