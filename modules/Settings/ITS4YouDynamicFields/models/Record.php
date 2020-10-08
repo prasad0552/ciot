@@ -145,10 +145,8 @@ class Settings_ITS4YouDynamicFields_Record_Model extends Settings_Vtiger_Record_
         $follows_up_id = $this->get('follows_up_id');
 
         if (isset($dfid) && $dfid != "" && $dfid != "0") {
-
             $sql1 = "UPDATE  its4you_dynamicfields SET description = ?, show_popup = ? WHERE dfid = ?";
             $Params1 = array($description, $show_popup, $dfid);
-
         } else {
             $sql2 = "SELECT (max( seq ) + 1) AS newseq FROM its4you_dynamicfields";
             $result2 = $adb->pquery($sql2, array());
