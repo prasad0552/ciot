@@ -14,7 +14,6 @@ class Settings_ITS4YouDynamicFields_Record_Model extends Settings_Vtiger_Record_
 
     public static function getInstance($dynamicfieldsid = '')
     {
-
         if (!empty($dynamicfieldsid)) {
             $adb = PearDatabase::getInstance();
             $sql1 = "SELECT its4you_dynamicfields.*, its4you_dynamicfields.module AS module_name FROM its4you_dynamicfields WHERE dfid = ?";
@@ -140,11 +139,10 @@ class Settings_ITS4YouDynamicFields_Record_Model extends Settings_Vtiger_Record_
         $dfid = $this->get('dfid');
         $description = $this->get('description');
         $moduleName = $this->get('module_name');
-        $show_popup = $this->get('show_popup');
+        $show_popup = $this->get('show_popup') ?? 0;
         $isgroup = $this->get('isgroup');
 
         $follows_up_id = $this->get('follows_up_id');
-
 
         if (isset($dfid) && $dfid != "" && $dfid != "0") {
 
@@ -152,7 +150,6 @@ class Settings_ITS4YouDynamicFields_Record_Model extends Settings_Vtiger_Record_
             $Params1 = array($description, $show_popup, $dfid);
 
         } else {
-
             $sql2 = "SELECT (max( seq ) + 1) AS newseq FROM its4you_dynamicfields";
             $result2 = $adb->pquery($sql2, array());
             $newseq = $adb->query_result($result2, "0", "newseq");
