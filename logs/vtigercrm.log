@@ -1,0 +1,40 @@
+Fri Aug  7 09:34:42 2020,038 [24311] FATAL VT - array (
+  'module' => 'Documents',
+  'view' => 'List',
+)
+Fri Aug  7 09:34:42 2020,038 [24311] FATAL VT - NULL
+Fri Aug  7 09:34:42 2020,038 [24311] FATAL VT - Documents_22
+Fri Aug  7 09:34:42 2020,140 [24311] FATAL VT - array (
+  'module' => 'Documents',
+  'view' => 'List',
+)
+Fri Aug  7 09:34:42 2020,140 [24311] FATAL VT - NULL
+Fri Aug  7 09:34:42 2020,140 [24311] FATAL VT - Documents_22
+Fri Aug  7 09:34:44 2020,241 [1923] FATAL VT - array (
+  'module' => 'Documents',
+  'parent' => '',
+  'page' => '1',
+  'view' => 'List',
+  'viewname' => '22',
+  'orderby' => '',
+  'sortorder' => '',
+  'app' => 'MARKETING',
+  'search_params' => '[]',
+  'tag_params' => '[]',
+  'nolistcache' => '0',
+  'list_headers' => '["notes_title","filename","modifiedtime","assigned_user_id","filelocationtype","filestatus"]',
+  'tag' => '',
+  '_pjax' => '#pjaxContainer',
+)
+Wed Sep  9 06:57:28 2020,989 [25654] FATAL VT - array (
+  'module' => 'Documents',
+  'view' => 'List',
+)
+Wed Sep  9 06:57:28 2020,990 [25654] FATAL VT - NULL
+Wed Sep  9 06:57:28 2020,990 [25654] FATAL VT - Documents_22
+Wed Sep  9 06:57:29 2020,018 [25654] FATAL VT - array (
+  'module' => 'Documents',
+  'view' => 'List',
+)
+Wed Sep  9 06:57:29 2020,018 [25654] FATAL VT - NULL
+Wed Sep  9 06:57:29 2020,018 [25654] FATAL VT - Documents_22

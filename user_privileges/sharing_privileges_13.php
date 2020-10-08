@@ -2,7 +2,7 @@
 
 
 //This is the sharing access privilege file
-$defaultOrgSharingPermission=array('2'=>2,'4'=>2,'6'=>2,'7'=>2,'9'=>3,'13'=>2,'16'=>3,'20'=>2,'21'=>2,'22'=>2,'23'=>2,'26'=>2,'8'=>2,'14'=>2,'30'=>3,'33'=>2,'37'=>2,'39'=>2,'40'=>2,'41'=>0,'45'=>0,'46'=>0,'47'=>0,'18'=>2,'10'=>2,);
+$defaultOrgSharingPermission=array('2'=>2,'4'=>2,'6'=>2,'7'=>2,'9'=>3,'13'=>2,'16'=>3,'20'=>2,'21'=>2,'22'=>2,'23'=>2,'26'=>2,'8'=>2,'14'=>2,'30'=>3,'33'=>2,'37'=>2,'39'=>2,'40'=>2,'41'=>3,'45'=>3,'46'=>3,'47'=>3,'18'=>2,'10'=>2,'52'=>2,'53'=>2,);
 
 $related_module_share=array(2=>array(6,),13=>array(6,),20=>array(6,2,),22=>array(6,2,20,),23=>array(6,22,),);
 
@@ -94,6 +94,10 @@ $Invoice_share_read_permission=array('ROLE'=>array(),'GROUP'=>array());
 
 $Invoice_share_write_permission=array('ROLE'=>array(),'GROUP'=>array());
 
+$Documents_share_read_permission=array('ROLE'=>array(),'GROUP'=>array());
+
+$Documents_share_write_permission=array('ROLE'=>array(),'GROUP'=>array());
+
 $ModComments_share_read_permission=array('ROLE'=>array(),'GROUP'=>array());
 
 $ModComments_share_write_permission=array('ROLE'=>array(),'GROUP'=>array());
@@ -102,7 +106,7 @@ $ProjectMilestone_share_read_permission=array('ROLE'=>array(),'GROUP'=>array());
 
 $ProjectMilestone_share_write_permission=array('ROLE'=>array(),'GROUP'=>array());
 
-$ProjectTask_share_read_permission=array('ROLE'=>array(),'GROUP'=>array());
+$ProjectTask_share_read_permission=array('ROLE'=>array(),'GROUP'=>array(17=>array(0=>11,1=>12,2=>13,),));
 
 $ProjectTask_share_write_permission=array('ROLE'=>array(),'GROUP'=>array());
 

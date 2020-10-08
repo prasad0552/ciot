@@ -12,7 +12,7 @@ $current_user_profiles=array(5,);
 
 $profileGlobalPermission=array('1'=>1,'2'=>1,);
 
-$profileTabsPermission=array('1'=>0,'3'=>0,);
+$profileTabsPermission=array('1'=>0,'51'=>0,'52'=>0,'53'=>0,'54'=>0,'55'=>0,'3'=>0,);
 
 $profileActionPermission=array();
 

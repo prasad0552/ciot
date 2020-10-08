@@ -195,6 +195,10 @@ class Vtiger_Block {
 		$instances = false;
 
 		$query = "SELECT * FROM vtiger_blocks WHERE tabid=? ORDER BY sequence";
+/**SWPATCHER-403AF494E6D501442B7EA18D213B0193-START-partialdetailview**/
+/** Don't remove the Start and Finish Markup! Modified: 2020-10-08 12:51:16 by SwVtTools **/
+$query = EventHandler_Module_Model::do_filter('vtiger.filter.detailview.blocks.sql', $query, $moduleInstance);
+/**SWPATCHER-403AF494E6D501442B7EA18D213B0193-FINISH**/
 		$queryParams = Array($moduleInstance->id);
 
 		$result = $adb->pquery($query, $queryParams);

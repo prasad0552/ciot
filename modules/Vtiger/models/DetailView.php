@@ -196,6 +196,10 @@ class Vtiger_DetailView_Model extends Vtiger_Base_Model {
 			$relatedLinks[] = $link;
 		}
 
+/**SWPATCHER-7A49B540DA022E547977062AA4D619BE-START-partialdetailview**/
+/** Don't remove the Start and Finish Markup! Modified: 2020-10-08 12:51:16 by SwVtTools **/
+$relatedLinks = EventHandler_Module_Model::do_filter('vtiger.filter.detailview.relatedtabs', $relatedLinks, $this);
+/**SWPATCHER-7A49B540DA022E547977062AA4D619BE-FINISH**/
 		return $relatedLinks;
 	}
 
