@@ -28,7 +28,7 @@ $languageStrings = array(
 	'Target Budget' => 'Target Budget',
 	'Project Url' => 'Activity Url',
 	'Progress' => 'Progress',
-		'Type' => 'Type',
+    'Type' => 'Type',
 	'Related to' => 'Related To',
 
 	//Summary Information
@@ -41,7 +41,6 @@ $languageStrings = array(
 	'LBL_TASKS_LOW' => 'Low Priority',
 	'LBL_TASKS_OTHER' => 'Other Priorities',
 	'LBL_SELECT_PROGRESS' => 'Progress - All',
-	'LBL_SELECT_STATUS' => 'Status - All',
 
 	//Related List
 	'LBL_CHARTS' => 'Charts',
