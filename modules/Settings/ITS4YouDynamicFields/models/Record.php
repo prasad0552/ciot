@@ -139,7 +139,7 @@ class Settings_ITS4YouDynamicFields_Record_Model extends Settings_Vtiger_Record_
         $dfid = $this->get('dfid');
         $description = $this->get('description');
         $moduleName = $this->get('module_name');
-        $show_popup = $this->get('show_popup') ?? 0;
+        $show_popup = !empty($this->get('show_popup')) ? $this->get('show_popup') : 0;
         $isgroup = $this->get('isgroup');
 
         $follows_up_id = $this->get('follows_up_id');
