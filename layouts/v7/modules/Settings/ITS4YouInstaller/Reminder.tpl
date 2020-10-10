@@ -7,11 +7,11 @@
  * ****************************************************************************** */*}
 {strip}
     <li class="its4you_installer_menu">
-        <div class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-            <a href="#" class="installer_icon">
-                <div class="its4you_installer_badge numberCircle hide"></div>
-            </a>
-        </div>
+{*        <div class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">*}
+{*            <a href="#" class="installer_icon">*}
+{*                <div class="its4you_installer_badge numberCircle hide"></div>*}
+{*            </a>*}
+{*        </div>*}
         <ul class="dropdown-menu its4you_installer_dropdown">
             <div id="its4you_installer_title">
                 <div class="its4you_installer_icon"></div>
