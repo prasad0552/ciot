@@ -13,6 +13,7 @@
  */
 class Project_ListView_Model extends Vtiger_ListView_Model
 {
+
     /**
      * Function to get the list of listview links
      * @param <Array> $linkParams Parameters to be replaced in the link template

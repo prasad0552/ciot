@@ -94,12 +94,12 @@ class Project_DetailView_Model extends Vtiger_DetailView_Model {
 		$relatedLinks = parent::getDetailViewRelatedLinks();
 		$recordModel = $this->getRecord();
 		$moduleName = $recordModel->getModuleName();
-//		$relatedLinks[] = array(
-//			'linktype' => 'DETAILVIEWTAB',
-//			'linklabel' => vtranslate('LBL_CHART', $moduleName),
-//			'linkurl' => $recordModel->getDetailViewUrl().'&mode=showChart',
-//			'linkicon' => ''
-//			);
+		$relatedLinks[] = array(
+			'linktype' => 'DETAILVIEWTAB',
+			'linklabel' => vtranslate('LBL_CHART', $moduleName),
+			'linkurl' => $recordModel->getDetailViewUrl().'&mode=showChart',
+			'linkicon' => ''
+			);
 
 		return $relatedLinks;
 	}
