@@ -209,7 +209,7 @@
 		<div class="col-lg-3"></div>
 		<div class="col-lg-6">
 			<div class="loginDiv widgetHeight">
-				<img class="img-responsive user-logo" src="layouts/v7/resources/Images/login-logo.png">
+				<img class="img-responsive user-logo" src="layouts/v7/resources/Images/ciot-logo-resizeimage.jpg">
 				<div>
 					<span class="{if !$ERROR}hide{/if} failureMessage" id="validationMessage">{$MESSAGE}</span>
 					<span class="{if !$MAIL_STATUS}hide{/if} successMessage">{$MESSAGE}</span>
