@@ -449,7 +449,7 @@ body {
   opacity: 0.8;
 }
 .global-nav .app-switcher-container .app-navigator:hover {
-  background: yellowgreen;
+  background: forestgreen;
   opacity: 1;
 }
 .global-nav .app-switcher-container .app-navigator:hover .app-icon {
@@ -544,7 +544,7 @@ a.menu-item:hover {
 .active-app-item,
 .app-item:hover {
   opacity: 1;
-  background: yellowgreen;
+  background: forestgreen;
   color: #f2f1f1;
 }
 .app-item-color-MARKETING {
@@ -612,7 +612,7 @@ a.menu-item:hover {
 }
 .app-menu .app-modules-dropdown li:hover {
   opacity: 1;
-  background: yellowgreen;
+  background: forestgreen;
   color: #f2f1f1;
 }
 .app-menu .app-modules-dropdown li:hover .module-icon {
@@ -975,7 +975,7 @@ input[type="password"].inputElement {
   white-space: nowrap;
 }
 .modules-menu ul li:hover {
-  background: yellowgreen;
+  background: forestgreen;
   opacity: 1;
 }
 .modules-menu ul li:hover a {
@@ -2724,7 +2724,7 @@ th {
 ********************************************/
 .modal-header {
   padding: 5px 15px;
-  background: yellowgreen;
+  background: forestgreen;
   color: #FFFFFF;
 }
 .modal-footer {
@@ -2748,7 +2748,7 @@ th {
   display: inline-block;
   width: 100%;
   float: left;
-  background: yellowgreen;
+  background: forestgreen;
   /*    height: 100%;*/
 }
 .settings-menu {
@@ -2759,7 +2759,7 @@ th {
   height: 100%;
 }
 .settings-flip {
-  background: none repeat scroll 0 0 yellowgreen;
+  background: none repeat scroll 0 0 forestgreen;
   font-size: 14px;
   margin: auto;
   padding: 5px;
@@ -3539,7 +3539,7 @@ th {
   border: 1px solid #D7D7D7;
 }
 .portal-annoucement-widget {
-  background: yellowgreen;
+  background: forestgreen;
   color: #FFFFFF;
   min-height: 20px;
   padding: 5px;
@@ -3552,7 +3552,7 @@ th {
   padding: 10px;
 }
 .portal-chart-header {
-  background: yellowgreen;
+  background: forestgreen;
   color: #FFFFFF;
   min-height: 20px;
   padding: 5px;
@@ -3566,7 +3566,7 @@ th {
   margin-bottom: 10px;
 }
 .portal-record-widget-content {
-  background: yellowgreen;
+  background: forestgreen;
   color: #FFFFFF;
   min-height: 10px;
   padding: 4px;
@@ -3579,7 +3579,7 @@ th {
   width: 285px !important;
 }
 .portal-shortcuts-header {
-  background: yellowgreen;
+  background: forestgreen;
   color: #FFFFFF;
   min-height: 20px;
   padding: 5px;
@@ -3597,7 +3597,7 @@ th {
   width: 285px !important;
 }
 .portal-helpdesk-widget-header {
-  background: yellowgreen;
+  background: forestgreen;
   color: #FFFFFF;
   min-height: 20px;
   padding: 5px;
@@ -5046,7 +5046,7 @@ hr {
   padding: 4px 6px;
 }
 .panel-collapse ul li a:hover {
-  background: yellowgreen;
+  background: forestgreen;
   opacity: 1;
 }
 .panel-collapse ul li a:hover a {
