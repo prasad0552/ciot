@@ -7471,7 +7471,7 @@ input:focus:-ms-input-placeholder {
   padding: 4px 10px 4px 5px !important;
 }
 .menu-item .custom-module {
-  font-family: 'OpenSans-Regular', sans-serif;
+  font-family: 'Poppins', 'OpenSans-Regular', sans-serif;
   font-size: 12px;
   border-radius: 4px;
   padding: 2px;
