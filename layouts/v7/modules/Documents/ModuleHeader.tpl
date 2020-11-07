@@ -78,25 +78,6 @@
 								</li>
 							{/if}
 						{/foreach}
-
-						{if $MODULE_SETTING_ACTIONS|@count gt 0}
-							<li>
-								<div class="settingsIcon">
-									<button type="button" class="btn btn-default module-buttons dropdown-toggle" data-toggle="dropdown">
-										<span class="fa fa-wrench" aria-hidden="true" title="{vtranslate('LBL_SETTINGS', $MODULE)}"></span>&nbsp;{vtranslate('LBL_CUSTOMIZE', 'Reports')}&nbsp; <span class="caret"></span>
-									</button>
-									<ul class="detailViewSetting dropdown-menu">
-										{foreach item=SETTING from=$MODULE_SETTING_ACTIONS}
-											{if {vtranslate($SETTING->getLabel())} eq "%s Numbering"}
-												<li id="{$MODULE_NAME}_listview_advancedAction_{$SETTING->getLabel()}"><a href={$SETTING->getUrl()}>{vtranslate($SETTING->getLabel(), $MODULE_NAME ,vtranslate($MODULE_NAME, $MODULE_NAME))}</a></li>
-											{else}
-												<li id="{$MODULE_NAME}_listview_advancedAction_{$SETTING->getLabel()}"><a href={$SETTING->getUrl()}>{vtranslate($SETTING->getLabel(), $MODULE_NAME, vtranslate("SINGLE_$MODULE_NAME", $MODULE_NAME))}</a></li>
-											{/if}
-										{/foreach}
-									</ul>
-								</div>
-							</li>
-						{/if}
 					</ul>
 				</div>
 			</div>

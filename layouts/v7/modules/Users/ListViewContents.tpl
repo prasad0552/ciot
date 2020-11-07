@@ -95,19 +95,6 @@
 										<span class="fieldValue">
 											<span class="value textOverflowEllipsis">
 												<div style="margin-left: -13px;">
-													{assign var=IMAGE_DETAILS value=$LISTVIEW_ENTRY->getImageDetails()}
-{*													{foreach item=IMAGE_INFO from=$IMAGE_DETAILS}*}
-{*														{if !empty($IMAGE_INFO.url)}*}
-{*															<div class='col-lg-2'>*}
-{*																<img height="25px" width="25px" src="{$IMAGE_INFO.url}">*}
-{*															</div>*}
-{*														{/if}*}
-{*													{/foreach}*}
-{*													{if $IMAGE_DETAILS[0]['id'] eq null}*}
-{*														<div class='col-lg-2'>*}
-{*															<i class="fa fa-user userDefaultIcon"></i>*}
-{*														</div>*}
-{*													{/if}*}
 													<div class="usersinfo col-lg-9 textOverflowEllipsis" title="{$LISTVIEW_ENTRY->get('last_name')}">
 														<a href="{$LISTVIEW_ENTRY->getDetailViewUrl()}">{$LISTVIEW_ENTRY->get($LISTVIEW_HEADERNAME)} {$LISTVIEW_ENTRY->get('last_name')}</a>
 													</div>

@@ -137,25 +137,6 @@
 							{if empty($QUALIFIEDMODULE)} 
 								{assign var=QUALIFIEDMODULE value=$MODULE}
 							{/if}
-							<li>
-								<div class="settingsIcon">
-									<button type="button" class="btn btn-default module-buttons dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="{vtranslate('LBL_SETTINGS', $MODULE)}">
-										<span class="fa fa-wrench" aria-hidden="true"></span>&nbsp; <span class="caret"></span>
-									</button>
-									<ul class="detailViewSetting dropdown-menu">
-										{foreach item=SETTING from=$LISTVIEW_LINKS['LISTVIEWSETTING']}
-											<li id="{$MODULE}_setings_lisview_advancedAction_{$SETTING->getLabel()}">
-												<a	{if stripos($SETTING->getUrl(), 'javascript:') === 0}
-														onclick='{$SETTING->getUrl()|substr:strlen("javascript:")};'
-													{else}
-														href="{$SETTING->getUrl()}"
-													{/if}>
-													{vtranslate($SETTING->getLabel(), $QUALIFIEDMODULE)}</a>
-											</li>
-										{/foreach}
-									</ul>
-								</div>
-							</li>
 						{/if}
 
 						{assign var=RESTRICTED_MODULE_LIST value=['Users', 'EmailTemplates']}
