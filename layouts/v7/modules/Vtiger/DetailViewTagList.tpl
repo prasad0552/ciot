@@ -23,12 +23,6 @@
             </a>
         </div>
     </div>
-    <div id="addTagContainer" >
-        <a id="addTagTriggerer" class="badge">
-            <i class="fa fa-plus"></i>
-            {vtranslate('LBL_ADD_NEW_TAG',$MODULE)}
-        </a>
-    </div>
     <div class="viewAllTagsContainer hide">
         <div class="modal-dialog">
             <div class="modal-content" style="min-height:200px">
@@ -84,4 +78,3 @@
         </div>
     </div>
 </div>
-      
