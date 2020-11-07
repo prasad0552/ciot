@@ -108,7 +108,7 @@ class Vtiger_RelatedList_View extends Vtiger_Index_View {
 		$viewer->assign('RELATED_MODULE', $relatedModuleModel);
 		$viewer->assign('RELATED_ENTIRES_COUNT', $noOfEntries);
 		$viewer->assign('RELATION_FIELD', $relationField);
-		$viewer->assign('SELECTED_MENU_CATEGORY', 'MARKETING');
+		$viewer->assign('SELECTED_MENU_CATEGORY', 'PROJECT');
 
 		if (PerformancePrefs::getBoolean('LISTVIEW_COMPUTE_PAGE_COUNT', false)) {
 			$totalCount = $relationListView->getRelatedEntriesCount();

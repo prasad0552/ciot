@@ -62,7 +62,7 @@ class Vtiger_ListViewQuickPreview_View extends Vtiger_Index_View {
 		$viewer->assign('MODULE_NAME', $moduleName);
 		$viewer->assign('SUMMARY_RECORD_STRUCTURE', $recordStrucure->getStructure());
 		$viewer->assign('$SOCIAL_ENABLED', false);
-		$viewer->assign('SELECTED_MENU_CATEGORY', 'MARKETING');
+		$viewer->assign('SELECTED_MENU_CATEGORY', 'PROJECT');
 		$viewer->assign('LIST_PREVIEW', true);
 
 		$pageNumber = 1;
