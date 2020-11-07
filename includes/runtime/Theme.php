@@ -122,7 +122,7 @@ class Vtiger_Theme extends Vtiger_Viewer {
 
 	public static function getv7AppStylePath($appTheme = false) {
 		if (empty($appTheme)) {
-			$appTheme = 'MARKETING';
+			$appTheme = 'PROJECT';
 		}
 		return Vtiger_Theme::getStylePath('', strtolower($appTheme));
 	}
