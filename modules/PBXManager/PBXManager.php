@@ -190,7 +190,9 @@ class PBXManager extends CRMEntity {
         $pbxmanager = Vtiger_Module::getInstance('PBXManager');
         foreach ($this->dependentModules as $module) {
             $moduleInstance = Vtiger_Module::getInstance($module);
-            $moduleInstance->unsetRelatedList($pbxmanager,"PBXManager",'get_dependents_list');
+            if($moduleInstance) {
+                $moduleInstance->unsetRelatedList($pbxmanager,"PBXManager",'get_dependents_list');
+            }
         }
         $log->fatal('Successfully removed Module Related lists');
     }

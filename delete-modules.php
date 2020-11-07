@@ -26,6 +26,10 @@ $module = Vtiger_Module::getInstance('PBXManager');
 if ($module)
     $module->delete();
 
+$module = Vtiger_Module::getInstance('HelpDesk');
+if ($module)
+    $module->delete();
+
 $module = Vtiger_Module::getInstance('Contacts');
 if ($module)
     $module->delete();
