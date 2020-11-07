@@ -71,8 +71,6 @@ class Vtiger_DashBoard_Model extends Vtiger_Base_Model {
 		$params[] = 'Mini List';
 		$params[] = 'Notebook';
 		$result = $db->pquery($sql, $params);
-        print_r($db->convert2Sql($sql, $params));
-
 		$widgets = array();
 		for($i=0; $i<$db->num_rows($result); $i++) {
 			$row = $db->query_result_rowdata($result, $i);
@@ -113,6 +111,7 @@ class Vtiger_DashBoard_Model extends Vtiger_Base_Model {
 		}
 
 		$result = $db->pquery($sql, $params);
+        print_r($db->convert2Sql($sql, $params));
 
 		$widgets = array();
 
@@ -124,7 +123,8 @@ class Vtiger_DashBoard_Model extends Vtiger_Base_Model {
 				continue;
 			}
 			$row['linkid'] = $row['id'];
-			if($this->checkModulePermission($row)) {
+
+            if($row && $this->checkModulePermission($row)) {
 				$widgets[] = Vtiger_Widget_Model::getInstanceFromValues($row);
 			}
 		}
