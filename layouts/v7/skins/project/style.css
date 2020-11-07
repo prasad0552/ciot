@@ -28,6 +28,7 @@ a:active {
   src: url('../fonts/OpenSans/Semibold/OpenSans-Semibold.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/OpenSans/Semibold/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/OpenSans/Semibold/OpenSans-Semibold.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/OpenSans/Semibold/OpenSans-Semibold.woff') format('woff'), /* Pretty Modern Browsers */ url('../fonts/OpenSans/Semibold/OpenSans-Semibold.svg#svgFontName') format('svg');
   /* Legacy iOS */
 }
+
 @font-face {
   font-family: 'ProximaNova-Regular';
   src: url('../fonts/ProximanovaWebfont/ProximaNova-Regular.ttf') format('truetype'), url('../fonts/ProximanovaWebfont/ProximaNova-Regular.woff') format('woff'), /* Pretty Modern Browsers */ url('../fonts/ProximanovaWebfont/ProximaNova-Regular.eot?#iefix') format('embedded-opentype');
@@ -1741,8 +1742,8 @@ input[type=checkbox]:checked {
 strong,
 b,
 th {
-  font-family: 'OpenSans-Semibold', 'ProximaNova-Semibold', sans-serif;
-  font-weight: normal;
+  font-family: 'Poppins', 'OpenSans-Semibold', 'ProximaNova-Semibold', sans-serif;
+  font-weight: 500;
   font-size: 1.1em;
 }
 .detailview-table {
@@ -3760,7 +3761,8 @@ th {
   margin-top: 15px;
 }
 .updates_timeline > li .update_info h5 {
-  font-family: 'OpenSans-Semibold', sans-serif;
+  font-family: 'Poppins', 'OpenSans-Semibold', sans-serif;
+
 }
 .updates_timeline > li .update_info h5 .field-name {
   color: #2b879e;
@@ -3781,7 +3783,7 @@ th {
   color: #2b879e;
 }
 .updates_timeline > li .update_info > .updateInfoContainer .update-name {
-  font-family: 'OpenSans-Semibold', sans-serif;
+  font-family: 'Poppins', 'OpenSans-Semibold', sans-serif;
   margin-bottom: 2px;
 }
 .updates_timeline > li .update_info > .updateInfoContainer em {
