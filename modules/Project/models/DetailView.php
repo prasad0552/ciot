@@ -23,7 +23,7 @@ class Project_DetailView_Model extends Vtiger_DetailView_Model {
 		$widgets = array();
 
 		$helpDeskInstance = Vtiger_Module_Model::getInstance('HelpDesk');
-		if($userPrivilegesModel->hasModuleActionPermission($helpDeskInstance->getId(), 'DetailView')) {
+		if($helpDeskInstance && $userPrivilegesModel->hasModuleActionPermission($helpDeskInstance->getId(), 'DetailView')) {
 			$createPermission = $userPrivilegesModel->hasModuleActionPermission($helpDeskInstance->getId(), 'CreateView');
 			$widgets[] = array(
 					'linktype' => 'DETAILVIEWWIDGET',

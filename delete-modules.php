@@ -5,6 +5,17 @@ include_once 'vtlib/Vtiger/Module.php';
 $Vtiger_Utils_Log = true;
 
 
+$module = Vtiger_Module::getInstance('Faq');
+if ($module)
+    $module->delete();
+
+
+$module = Vtiger_Module::getInstance('Portal');
+if ($module)
+    $module->delete();
+
+
+
 $module = Vtiger_Module::getInstance('Assets');
 if ($module)
     $module->delete();
@@ -29,6 +40,7 @@ if ($module)
 $module = Vtiger_Module::getInstance('HelpDesk');
 if ($module)
     $module->delete();
+
 
 $module = Vtiger_Module::getInstance('Contacts');
 if ($module)
