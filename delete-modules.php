@@ -9,17 +9,25 @@ $module = Vtiger_Module::getInstance('Faq');
 if ($module)
     $module->delete();
 
+$module = Vtiger_Module::getInstance('SwVtTools');
+if ($module)
+    $module->delete();
 
 $module = Vtiger_Module::getInstance('Portal');
 if ($module)
     $module->delete();
 
-
-
 $module = Vtiger_Module::getInstance('Assets');
 if ($module)
     $module->delete();
 
+$module = Vtiger_Module::getInstance('SMSNotifier');
+if ($module)
+    $module->delete();
+
+$module = Vtiger_Module::getInstance('Emails');
+if ($module)
+    $module->delete();
 
 $module = Vtiger_Module::getInstance('Google');
 if ($module)
