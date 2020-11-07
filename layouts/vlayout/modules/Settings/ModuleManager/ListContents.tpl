@@ -70,8 +70,5 @@
 				</tr>
 			</table>
 		</div>
-                <div class="row-fluid" style="padding: 20px 0px;">
-                    <a href="{$IMPORT_USER_MODULE_FROM_FILE_URL}">{vtranslate('LBL_INSTALL_FROM_ZIP', $QUALIFIED_MODULE)}</a>
-                </div>
 	</div>
 {/strip}
