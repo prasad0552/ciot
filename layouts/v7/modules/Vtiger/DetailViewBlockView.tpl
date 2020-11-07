@@ -11,9 +11,7 @@
 	{if !empty($PICKIST_DEPENDENCY_DATASOURCE)}
 		<input type="hidden" name="picklistDependency" value='{Vtiger_Util_Helper::toSafeHTML($PICKIST_DEPENDENCY_DATASOURCE)}' />
 	{/if}
-	{if !empty($FIELD_DEPENDENCY_DATASOURCE)}
-		<input type="hidden" name="fieldDependency" value='{Vtiger_Util_Helper::toSafeHTML($FIELD_DEPENDENCY_DATASOURCE)}'/>
-	{/if}
+
 	{foreach key=BLOCK_LABEL_KEY item=FIELD_MODEL_LIST from=$RECORD_STRUCTURE}
 		{assign var=BLOCK value=$BLOCK_LIST[$BLOCK_LABEL_KEY]}
 		{if $BLOCK eq null or $FIELD_MODEL_LIST|@count lte 0}{continue}{/if}

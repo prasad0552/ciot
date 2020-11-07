@@ -123,7 +123,7 @@ mobileapp.controller('VtigerDetailController', function ($scope, $api) {
     };
     
     $scope.detailViewEditEvent = function(id){
-        window.location.href = "index.php?module=" + $scope.module + "&view=Edit&record="+$scope.record;
+        window.location.href = "index.php?module=" + $scope.module + "&view=Edit&record="+$scope.record+"&app=" + $scope.selectedApp;
     };
     
     $scope.isUpdateable = function() {
@@ -134,7 +134,7 @@ mobileapp.controller('VtigerDetailController', function ($scope, $api) {
         return ($scope.deleteable)? true : false;
     };
     $scope.showRelatedList = function(module){
-        window.location.href = "index.php?module="+module+"&view=List";
+        window.location.href = "index.php?module="+module+"&view=List&app="+$scope.selectedApp;
     };
 });
 

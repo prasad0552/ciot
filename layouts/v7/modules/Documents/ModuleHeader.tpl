@@ -25,7 +25,7 @@
 						{assign var=DEFAULT_FILTER_URL value=$MODULE_MODEL->getListViewUrlWithAllFilter()}
 					{/if}
 				{/if}
-				<a title="{vtranslate($MODULE, $MODULE)}" href='{$DEFAULT_FILTER_URL}'><h4 class="module-title pull-left textOverflowEllipsis text-uppercase">&nbsp;{vtranslate($MODULE, $MODULE)}&nbsp;</h4></a>
+				<a title="{vtranslate($MODULE, $MODULE)}" href='{$DEFAULT_FILTER_URL}&app={$SELECTED_MENU_CATEGORY}'><h4 class="module-title pull-left textOverflowEllipsis text-uppercase">&nbsp;{vtranslate($MODULE, $MODULE)}&nbsp;</h4></a>
 				{if $smarty.session.lvs.$MODULE.viewname}
 					{assign var=VIEWID value=$smarty.session.lvs.$MODULE.viewname}
 				{/if}
@@ -64,6 +64,7 @@
 											<li class="dropdown-header"><i class="fa fa-upload"></i> {vtranslate('LBL_FILE_UPLOAD', $MODULE)}</li>
 											<li id="VtigerAction">
 												<a href="javascript:Documents_Index_Js.uploadTo('Vtiger')">
+													<img style="  margin-top: -3px;margin-right: 4%;" title="Vtiger" alt="Vtiger" src="layouts/v7/skins//images/Vtiger.png">
 													{vtranslate('LBL_TO_SERVICE', $MODULE_NAME, {vtranslate('LBL_VTIGER', $MODULE_NAME)})}
 												</a>
 											</li>

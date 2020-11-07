@@ -25,9 +25,6 @@
 					{if !empty($PICKIST_DEPENDENCY_DATASOURCE)}
 						<input type="hidden" name="picklistDependency" value='{Vtiger_Util_Helper::toSafeHTML($PICKIST_DEPENDENCY_DATASOURCE)}' />
 					{/if}
-					{if !empty($FIELD_DEPENDENCY_DATASOURCE)}
-						<input type="hidden" name="fieldDependency" value='{Vtiger_Util_Helper::toSafeHTML($FIELD_DEPENDENCY_DATASOURCE)}' />
-					{/if}
 					<input type="hidden" name="module" value="{$MODULE}">
 					<input type="hidden" name="action" value="SaveAjax">
 					<input type="hidden" name="calendarModule" value="{$MODULE}">

@@ -9,7 +9,7 @@
 
 <footer class="app-footer">
 	<p>
-		Powered by sciltech - ©{date('Y')}
+		Powered by SCILTECH - &nbsp;&nbsp;© {date('Y')}&nbsp;&nbsp;
 	</p>
 </footer>
 </div>

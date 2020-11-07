@@ -40,7 +40,7 @@
 								{break}
 							{/if}
 						{/foreach}
-						<div class="menu-item app-item dropdown-toggle app-item-color-{$APP_NAME}" data-app-name="{$APP_NAME}" id="{$APP_NAME}_modules_dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-default-url="{$FIRST_MENU_MODEL->getDefaultUrl()}">
+						<div class="menu-item app-item dropdown-toggle app-item-color-{$APP_NAME}" data-app-name="{$APP_NAME}" id="{$APP_NAME}_modules_dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-default-url="{$FIRST_MENU_MODEL->getDefaultUrl()}&app={$APP_NAME}">
 							<div class="menu-items-wrapper app-menu-items-wrapper">
 								<span class="app-icon-list fa {$APP_IMAGE_MAP.$APP_NAME}"></span>
 								<span class="app-name textOverflowEllipsis"> {vtranslate("LBL_$APP_NAME")}</span>
@@ -51,7 +51,7 @@
 							{foreach item=moduleModel key=moduleName from=$APP_GROUPED_MENU[$APP_NAME]}
 								{assign var='translatedModuleLabel' value=vtranslate($moduleModel->get('label'),$moduleName )}
 								<li>
-									<a href="{$moduleModel->getDefaultUrl()}" title="{$translatedModuleLabel}">
+									<a href="{$moduleModel->getDefaultUrl()}&app={$APP_NAME}" title="{$translatedModuleLabel}">
 										<span class="module-icon">{$moduleModel->getModuleIcon()}</span>
 										<span class="module-name textOverflowEllipsis"> {$translatedModuleLabel}</span>
 									</a>
@@ -80,16 +80,6 @@
 					</div>
 				</div>
 			{/if}
-{*			{if $USER_MODEL->isAdminUser()}*}
-{*				{if vtlib_isModuleActive('ExtensionStore')}*}
-{*					<div class="menu-item app-item app-item-misc" data-default-url="index.php?module=ExtensionStore&parent=Settings&view=ExtensionStore">*}
-{*						<div class="menu-items-wrapper">*}
-{*							<span class="app-icon-list fa fa-shopping-cart"></span>*}
-{*							<span class="app-name textOverflowEllipsis"> {vtranslate('LBL_EXTENSION_STORE', 'Settings:Vtiger')}</span>*}
-{*						</div>*}
-{*					</div>*}
-{*				{/if}*}
-{*			{/if}*}
 			{if $USER_MODEL->isAdminUser()}
 				<div class="dropdown app-modules-dropdown-container dropdown-compact">
 					<div class="menu-item app-item dropdown-toggle app-item-misc" data-app-name="TOOLS" id="TOOLS_modules_dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-default-url="{if $USER_MODEL->isAdminUser()}index.php?module=Vtiger&parent=Settings&view=Index{else}index.php?module=Users&view=Settings{/if}">
@@ -102,12 +92,6 @@
 						</div>
 					</div>
 					<ul class="dropdown-menu app-modules-dropdown dropdown-modules-compact" aria-labelledby="{$APP_NAME}_modules_dropdownMenu" data-height="0.27">
-{*						<li>*}
-{*							<a href="?module=Vtiger&parent=Settings&view=Index">*}
-{*								<span class="fa fa-cog module-icon"></span>*}
-{*								<span class="module-name textOverflowEllipsis"> {vtranslate('LBL_CRM_SETTINGS','Vtiger')}</span>*}
-{*							</a>*}
-{*						</li>*}
 						<li>
 							<a href="?module=Users&parent=Settings&view=List">
 								<span class="fa fa-user module-icon"></span>

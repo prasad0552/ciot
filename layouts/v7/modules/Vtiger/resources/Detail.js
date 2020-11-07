@@ -878,7 +878,7 @@ Vtiger.Class("Vtiger_Detail_Js",{
 					if(err === null){
 						if(typeof data !== 'object'){
 							var appName = app.getAppName();
-							window.location.href = data;
+							window.location.href = data+'&app='+appName;
 						}else {
 							app.helper.showAlertBox({'message' : data.prototype.message});
 						}
@@ -3022,66 +3022,6 @@ Vtiger.Class("Vtiger_Detail_Js",{
 	 * Function to register event for setting up picklistdependency
 	 * for a module if exist on change of picklist value
 	 */
-	registerEventForFieldDependencySetup: function () {
-		var fieldDependencyElemnt = jQuery('[name="fieldDependency"]');
-
-		if (fieldDependencyElemnt.length <= 0) {
-			return;
-		}
-		var fieldDependencyMapping = JSON.parse(fieldDependencyElemnt.val());
-
-		var sourcePicklists = Object.keys(fieldDependencyMapping);
-		if (sourcePicklists.length <= 0) {
-			return;
-		}
-
-		var sourcePickListNames = "";
-		for (var i = 0; i < sourcePicklists.length; i++) {
-			if (i != sourcePicklists.length - 1)
-				sourcePickListNames += '[name="' + sourcePicklists[i] + '"],';
-			else
-				sourcePickListNames += '[name="' + sourcePicklists[i] + '"]';
-		}
-
-		var sourcePickListElements = container.find(sourcePickListNames);
-
-		sourcePickListElements.on('change', function (e) {
-			var currentElement = jQuery(e.currentTarget);
-			var sourcePicklistname = currentElement.attr('name');
-			var configuredDependencyObject = fieldDependencyMapping[sourcePicklistname];
-			var selectedValue = currentElement.val();
-			var targetObjectForSelectedSourceValue = configuredDependencyObject[selectedValue];
-			var picklistmap = configuredDependencyObject["__DEFAULT__"];
-
-			if (typeof targetObjectForSelectedSourceValue == 'undefined') {
-				targetObjectForSelectedSourceValue = picklistmap;
-			}
-
-			jQuery.each(picklistmap, function (targetFieldName, targetPickListValues) {
-				var targetBlock = jQuery('*[data-block="' + targetFieldName + '"]');
-				if (targetBlock.length <= 0) {
-					return;
-				}
-				targetBlock.show();
-			});
-
-			jQuery.each(targetObjectForSelectedSourceValue, function (targetFieldName, targetPickListValues) {
-				var targetBlock = jQuery('*[data-block="' + targetFieldName + '"]');
-				if (targetBlock.length <= 0) {
-					return;
-				}
-				targetBlock.hide();
-			});
-		});
-
-		//To Trigger the change on load
-		sourcePickListElements.trigger('change');
-	},
-
-	/**
-	 * Function to register event for setting up picklistdependency
-	 * for a module if exist on change of picklist value
-	 */
 	registerEventForPicklistDependencySetup : function(container){
 		var thisInstance = this;
 		var picklistDependcyElemnt = jQuery('[name="picklistDependency"]',container);
@@ -3204,8 +3144,6 @@ Vtiger.Class("Vtiger_Detail_Js",{
 		this.registerClearReferenceSelectionEvent();
 		//register event for picklist dependency setup
 		this.registerEventForPicklistDependencySetup(this.getForm());
-		this.registerEventForFieldDependencySetup(this.getForm());
-
 		vtUtils.enableTooltips();
 	},
 });

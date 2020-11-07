@@ -12,9 +12,7 @@
 	{if !empty($PICKIST_DEPENDENCY_DATASOURCE)}
 		<input type="hidden" name="picklistDependency" value='{Vtiger_Util_Helper::toSafeHTML($PICKIST_DEPENDENCY_DATASOURCE)}' />
 	{/if}
-	{if !empty($FIELD_DEPENDENCY_DATASOURCE)}
-		<input type="hidden" name="fieldDependency" value='{Vtiger_Util_Helper::toSafeHTML($FIELD_DEPENDENCY_DATASOURCE)}'/>
-	{/if}
+
 	<div name='editContent'>
 		{if $DUPLICATE_RECORDS}
 			<div class="fieldBlockContainer duplicationMessageContainer">

@@ -63,7 +63,7 @@ mobileapp.controller('VtigerListController', function ($scope, $api, $mdDialog) 
         });
     };
     $scope.listViewCreateEvent = function(){
-        window.location.href = "index.php?module=" + $scope.module + "&view=Edit;
+        window.location.href = "index.php?module=" + $scope.module + "&view=Edit&app=" + $scope.selectedApp;
     };
 
     // Method to Reorder records in Asc / Desc
@@ -74,7 +74,7 @@ mobileapp.controller('VtigerListController', function ($scope, $api, $mdDialog) 
 
     // 
     $scope.gotoDetailView = function (rid) {
-        window.location.href = "index.php?module=" + $scope.module + "&view=Detail&record=" + rid ;
+        window.location.href = "index.php?module=" + $scope.module + "&view=Detail&record=" + rid + "&app=" + $scope.selectedApp;
     };
 
     $scope.hideRecordActions = function () {
@@ -82,7 +82,7 @@ mobileapp.controller('VtigerListController', function ($scope, $api, $mdDialog) 
     };
 
     $scope.listViewEditEvent = function(id){
-        window.location.href = "index.php?module=" + $scope.module + "&view=Edit&record="+id;
+        window.location.href = "index.php?module=" + $scope.module + "&view=Edit&record="+id+"&app=" + $scope.selectedApp;
     };
     
     $scope.showConfirmDelete = function(ev, id) {

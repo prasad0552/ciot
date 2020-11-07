@@ -57,11 +57,11 @@
 						<th>
 							{if !$SEARCH_MODE_RESULTS}
 					<div class="table-actions">
-{*						<div class="dropdown" style="float:left;">*}
-{*							<span class="input dropdown-toggle" data-toggle="dropdown" title="{vtranslate('LBL_CLICK_HERE_TO_SELECT_ALL_RECORDS',$MODULE)}">*}
-{*								<input class="listViewEntriesMainCheckBox" type="checkbox">*}
-{*							</span>*}
-{*						</div>*}
+						<div class="dropdown" style="float:left;">
+							<span class="input dropdown-toggle" data-toggle="dropdown" title="{vtranslate('LBL_CLICK_HERE_TO_SELECT_ALL_RECORDS',$MODULE)}">
+								<input class="listViewEntriesMainCheckBox" type="checkbox">
+							</span>
+						</div>
 						{if $MODULE_MODEL->isFilterColumnEnabled()}
 							<div id="listColumnFilterContainer">
 								<div class="listColumnFilter {if $CURRENT_CV_MODEL and !($CURRENT_CV_MODEL->isCvEditable())}disabled{/if}"  
@@ -139,7 +139,7 @@
 							{assign var=DATA_ID value=$RELATED_TO->getId()}
 							{assign var=DATA_URL value=$RELATED_TO->getDetailViewUrl()}
 						{/if}
-						<tr class="listViewEntries" data-id='{$DATA_ID}' data-recordUrl='{$DATA_URL}' id="{$MODULE}_listView_row_{$smarty.foreach.listview.index+1}" {if $MODULE eq 'Calendar'}data-recurring-enabled='{$LISTVIEW_ENTRY->isRecurringEnabled()}'{/if}>
+						<tr class="listViewEntries" data-id='{$DATA_ID}' data-recordUrl='{$DATA_URL}&app={$SELECTED_MENU_CATEGORY}' id="{$MODULE}_listView_row_{$smarty.foreach.listview.index+1}" {if $MODULE eq 'Calendar'}data-recurring-enabled='{$LISTVIEW_ENTRY->isRecurringEnabled()}'{/if}>
 							<td class = "listViewRecordActions">
 								{include file="ListViewRecordActions.tpl"|vtemplate_path:$MODULE}
 							</td>
@@ -157,7 +157,7 @@
 							<span class="fieldValue">
 								<span class="value">
 									{if ($LISTVIEW_HEADER->isNameField() eq true or $LISTVIEW_HEADER->get('uitype') eq '4') and $MODULE_MODEL->isListViewNameFieldNavigationEnabled() eq true }
-										<a href="{$LISTVIEW_ENTRY->getDetailViewUrl()}">{$LISTVIEW_ENTRY->get($LISTVIEW_HEADERNAME)}</a>
+										<a href="{$LISTVIEW_ENTRY->getDetailViewUrl()}&app={$SELECTED_MENU_CATEGORY}">{$LISTVIEW_ENTRY->get($LISTVIEW_HEADERNAME)}</a>
 										{if $MODULE eq 'Products' &&$LISTVIEW_ENTRY->isBundle()}
 											&nbsp;-&nbsp;<i class="mute">{vtranslate('LBL_PRODUCT_BUNDLE', $MODULE)}</i>
 										{/if}

@@ -14,9 +14,9 @@
 	<div class="buttonGroups pull-right">
 		<div class="btn-group">
 			{if $SELECTABLE_WIDGETS|count gt 0}
-{*				<button class='btn btn-default addButton dropdown-toggle' data-toggle='dropdown'>*}
-{*					{vtranslate('LBL_ADD_WIDGET')}&nbsp;&nbsp;<i class="caret"></i>*}
-{*				</button>*}
+				<button class='btn btn-default addButton dropdown-toggle' data-toggle='dropdown'>
+					{vtranslate('LBL_ADD_WIDGET')}&nbsp;&nbsp;<i class="caret"></i>
+				</button>
 
 				<ul class="dropdown-menu dropdown-menu-right widgetsList pull-right" style="min-width:100%;text-align:left;">
 					{assign var="MINILISTWIDGET" value=""}

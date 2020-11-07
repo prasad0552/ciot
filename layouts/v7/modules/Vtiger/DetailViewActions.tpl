@@ -14,25 +14,10 @@
         <div class="pull-right btn-toolbar">
             <div class="btn-group">
             {assign var=STARRED value=$RECORD->get('starred')}
-{*            {if $MODULE_MODEL->isStarredEnabled()}*}
-{*                <button class="btn btn-default markStar {if $STARRED} active {/if}" id="starToggle" style="width:100px;">*}
-{*                    <div class='starredStatus' title="{vtranslate('LBL_STARRED', $MODULE)}">*}
-{*                        <div class='unfollowMessage'>*}
-{*                            <i class="fa fa-star-o"></i> &nbsp;{vtranslate('LBL_UNFOLLOW',$MODULE)}*}
-{*                        </div>*}
-{*                        <div class='followMessage'>*}
-{*                            <i class="fa fa-star active"></i> &nbsp;{vtranslate('LBL_FOLLOWING',$MODULE)}*}
-{*                        </div>*}
-{*                    </div>*}
-{*                    <div class='unstarredStatus' title="{vtranslate('LBL_NOT_STARRED', $MODULE)}">*}
-{*                        {vtranslate('LBL_FOLLOW',$MODULE)}*}
-{*                    </div>*}
-{*                </button>*}
-{*            {/if}*}
             {foreach item=DETAIL_VIEW_BASIC_LINK from=$DETAILVIEW_LINKS['DETAILVIEWBASIC']}
                 <button class="btn btn-default" id="{$MODULE_NAME}_detailView_basicAction_{Vtiger_Util_Helper::replaceSpaceWithUnderScores($DETAIL_VIEW_BASIC_LINK->getLabel())}"
                         {if $DETAIL_VIEW_BASIC_LINK->isPageLoadLink()}
-                            onclick="window.location.href = '{$DETAIL_VIEW_BASIC_LINK->getUrl()}'"
+                            onclick="window.location.href = '{$DETAIL_VIEW_BASIC_LINK->getUrl()}&app={$SELECTED_MENU_CATEGORY}'"
                         {else}
                             onclick="{$DETAIL_VIEW_BASIC_LINK->getUrl()}"
                         {/if}
@@ -55,7 +40,7 @@
                                 {if $DETAIL_VIEW_LINK->getUrl()|strstr:"javascript"} 
                                     <a href='{$DETAIL_VIEW_LINK->getUrl()}'>{vtranslate($DETAIL_VIEW_LINK->getLabel(), $MODULE_NAME)}</a>
                                 {else}
-                                    <a href='{$DETAIL_VIEW_LINK->getUrl()}' >{vtranslate($DETAIL_VIEW_LINK->getLabel(), $MODULE_NAME)}</a>
+                                    <a href='{$DETAIL_VIEW_LINK->getUrl()}&app={$SELECTED_MENU_CATEGORY}' >{vtranslate($DETAIL_VIEW_LINK->getLabel(), $MODULE_NAME)}</a>
                                 {/if}
                             </li>
                         {/if}
@@ -65,10 +50,10 @@
             </div>
             {if !{$NO_PAGINATION}}
             <div class="btn-group pull-right">
-                <button class="btn btn-default " id="detailViewPreviousRecordButton" {if empty($PREVIOUS_RECORD_URL)} disabled="disabled" {else} onclick="window.location.href = '{$PREVIOUS_RECORD_URL}'" {/if} >
+                <button class="btn btn-default " id="detailViewPreviousRecordButton" {if empty($PREVIOUS_RECORD_URL)} disabled="disabled" {else} onclick="window.location.href = '{$PREVIOUS_RECORD_URL}&app={$SELECTED_MENU_CATEGORY}'" {/if} >
                     <i class="fa fa-chevron-left"></i>
                 </button>
-                <button class="btn btn-default  " id="detailViewNextRecordButton"{if empty($NEXT_RECORD_URL)} disabled="disabled" {else} onclick="window.location.href = '{$NEXT_RECORD_URL}'" {/if}>
+                <button class="btn btn-default  " id="detailViewNextRecordButton"{if empty($NEXT_RECORD_URL)} disabled="disabled" {else} onclick="window.location.href = '{$NEXT_RECORD_URL}&app={$SELECTED_MENU_CATEGORY}'" {/if}>
                     <i class="fa fa-chevron-right"></i>
                 </button>
             </div>

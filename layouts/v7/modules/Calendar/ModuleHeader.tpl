@@ -23,7 +23,7 @@
 						{assign var=DEFAULT_FILTER_URL value=$MODULE_MODEL->getListViewUrlWithAllFilter()}
 					{/if}
 				{/if}
-				<a title="{vtranslate($MODULE, $MODULE)}" href='{$DEFAULT_FILTER_URL}'><h4 class="module-title pull-left text-uppercase">&nbsp;{vtranslate($MODULE, $MODULE)}&nbsp;</h4></a>
+				<a title="{vtranslate($MODULE, $MODULE)}" href='{$DEFAULT_FILTER_URL}&app={$SELECTED_MENU_CATEGORY}'><h4 class="module-title pull-left text-uppercase">&nbsp;{vtranslate($MODULE, $MODULE)}&nbsp;</h4></a>
 				{if $smarty.session.lvs.$MODULE.viewname}
 					{assign var=VIEWID value=$smarty.session.lvs.$MODULE.viewname}
 				{/if}
@@ -36,7 +36,7 @@
 							{/if}
 						{/foreach}
 					{/foreach}
-					<p class="current-filter-name filter-name pull-left cursorPointer" title="{$CVNAME}">&nbsp;<span class="fa fa-angle-right pull-left" aria-hidden="true"></span><a href='{$MODULE_MODEL->getListViewUrl()}&viewname={$VIEWID}'>&nbsp;{$CVNAME}&nbsp;</a></p>
+					<p class="current-filter-name filter-name pull-left cursorPointer" title="{$CVNAME}">&nbsp;<span class="fa fa-angle-right pull-left" aria-hidden="true"></span><a href='{$MODULE_MODEL->getListViewUrl()}&viewname={$VIEWID}&app={$SELECTED_MENU_CATEGORY}'>&nbsp;{$CVNAME}&nbsp;</a></p>
 				{/if}
 
 				{assign var=SINGLE_MODULE_NAME value='SINGLE_'|cat:$MODULE}
@@ -72,7 +72,7 @@
 										{if stripos($BASIC_ACTION->getUrl(), 'javascript:')===0}
 											onclick='{$BASIC_ACTION->getUrl()|substr:strlen("javascript:")};'
 										{else} 
-											onclick='window.location.href="{$BASIC_ACTION->getUrl()}"'
+											onclick='window.location.href="{$BASIC_ACTION->getUrl()}&app={$SELECTED_MENU_CATEGORY}"'
 										{/if}>
 										<div class="fa {$BASIC_ACTION->getIcon()}" aria-hidden="true"></div>&nbsp;
 										{vtranslate($BASIC_ACTION->getLabel(), $MODULE)}

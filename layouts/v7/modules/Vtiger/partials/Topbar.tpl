@@ -30,20 +30,17 @@
 						</div>  
 					</div>
 				</div>
-{*				<div class="search-links-container col-md-3 col-lg-3 col-sm-3">*}
-{*					<div class="search-link hidden-xs">*}
-{*						<span class="fa fa-search" aria-hidden="true"></span>*}
-{*						<input class="keyword-input" type="text" placeholder="{vtranslate('LBL_TYPE_SEARCH')}" value="{$GLOBAL_SEARCH_VALUE}">*}
-{*						<span id="adv-search" class="adv-search fa fa-chevron-circle-down pull-right cursorPointer" aria-hidden="true"></span>*}
-{*					</div>*}
-{*				</div>*}
+				<div class="search-links-container col-md-3 col-lg-3 col-sm-3">
+					<div class="search-link hidden-xs">
+						<span class="fa fa-search" aria-hidden="true"></span>
+						<input class="keyword-input" type="text" placeholder="{vtranslate('LBL_TYPE_SEARCH')}" value="{$GLOBAL_SEARCH_VALUE}">
+						<span id="adv-search" class="adv-search fa fa-chevron-circle-down pull-right cursorPointer" aria-hidden="true"></span>
+					</div>
+				</div>
 				<div id="navbar" class="col-sm-6 col-md-3 col-lg-3 collapse navbar-collapse navbar-right global-actions">
 					<ul class="nav navbar-nav">
 						<li>
 							<div class="dropdown">
-{*								<div class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">*}
-{*									<a href="#" id="menubar_quickCreate" class="qc-button fa fa-plus-circle" title="{vtranslate('LBL_QUICK_CREATE',$MODULE)}" aria-hidden="true"></a>*}
-{*								</div>*}
 								<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="width:500px;">
 									<li class="title" style="padding: 5px 0 0 15px;">
 										<strong>{vtranslate('LBL_QUICK_CREATE',$MODULE)}</strong>
