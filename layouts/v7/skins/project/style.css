@@ -1839,7 +1839,7 @@ th {
   display: table-cell;
 }
 .record-header {
-  /*min-height: 80px;*/
+  min-height: 80px;
 }
 .record-header .recordImage {
   float: left;
@@ -1849,7 +1849,7 @@ th {
 .record-header .recordBasicInfo {
   float: left;
   display: inline-block;
-  /*padding-left: 90px;*/
+  padding-left: 90px;
   width: 100%;
 }
 .record-header .recordBasicInfo .info-row,
