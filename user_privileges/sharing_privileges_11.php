@@ -102,11 +102,7 @@ $ModComments_share_read_permission=array('ROLE'=>array(),'GROUP'=>array());
 
 $ModComments_share_write_permission=array('ROLE'=>array(),'GROUP'=>array());
 
-$ProjectMilestone_share_read_permission=array('ROLE'=>array(),'GROUP'=>array());
-
-$ProjectMilestone_share_write_permission=array('ROLE'=>array(),'GROUP'=>array());
-
-$ProjectTask_share_read_permission=array('ROLE'=>array(),'GROUP'=>array(17=>array(0=>11,1=>12,2=>13,),));
+$ProjectTask_share_read_permission=array('ROLE'=>array(),'GROUP'=>array(17=>array(0=>11,1=>12,2=>13,3=>39,4=>40,5=>41,6=>42,7=>43,8=>44,9=>45,),));
 
 $ProjectTask_share_write_permission=array('ROLE'=>array(),'GROUP'=>array());
 

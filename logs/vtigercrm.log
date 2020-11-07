@@ -38,3 +38,55 @@ Wed Sep  9 06:57:29 2020,018 [25654] FATAL VT - array (
 )
 Wed Sep  9 06:57:29 2020,018 [25654] FATAL VT - NULL
 Wed Sep  9 06:57:29 2020,018 [25654] FATAL VT - Documents_22
+Sat Oct 10 09:14:09 2020,288 [8088] FATAL VT - array (
+  'module' => 'Documents',
+  'view' => 'List',
+)
+Sat Oct 10 09:14:09 2020,289 [8088] FATAL VT - NULL
+Sat Oct 10 09:14:09 2020,289 [8088] FATAL VT - Documents_22
+Sat Oct 10 09:14:09 2020,317 [8088] FATAL VT - array (
+  'module' => 'Documents',
+  'view' => 'List',
+)
+Sat Oct 10 09:14:09 2020,317 [8088] FATAL VT - NULL
+Sat Oct 10 09:14:09 2020,317 [8088] FATAL VT - Documents_22
+Sat Oct 10 09:14:42 2020,272 [22329] FATAL VT - array (
+  'module' => 'Documents',
+  'parent' => '',
+  'page' => '1',
+  'view' => 'List',
+  'viewname' => '22',
+  'orderby' => '',
+  'sortorder' => '',
+  'app' => 'MARKETING',
+  'search_params' => '[]',
+  'tag_params' => '[]',
+  'nolistcache' => '0',
+  'list_headers' => '["notes_title","filename","modifiedtime","assigned_user_id","filelocationtype","filestatus"]',
+  'tag' => '',
+  '_pjax' => '#pjaxContainer',
+)
+Mon Oct 12 07:35:49 2020,042 [26279] FATAL VT - array (
+  'module' => 'Documents',
+  'view' => 'List',
+)
+Mon Oct 12 07:35:49 2020,044 [26279] FATAL VT - NULL
+Mon Oct 12 07:35:49 2020,044 [26279] FATAL VT - Documents_22
+Mon Oct 12 07:35:49 2020,073 [26279] FATAL VT - array (
+  'module' => 'Documents',
+  'view' => 'List',
+)
+Mon Oct 12 07:35:49 2020,073 [26279] FATAL VT - NULL
+Mon Oct 12 07:35:49 2020,073 [26279] FATAL VT - Documents_22
+Thu Oct 15 04:24:37 2020,280 [13542] FATAL VT - array (
+  'module' => 'Documents',
+  'view' => 'List',
+)
+Thu Oct 15 04:24:37 2020,280 [13542] FATAL VT - NULL
+Thu Oct 15 04:24:37 2020,280 [13542] FATAL VT - Documents_22
+Thu Oct 15 04:24:37 2020,308 [13542] FATAL VT - array (
+  'module' => 'Documents',
+  'view' => 'List',
+)
+Thu Oct 15 04:24:37 2020,308 [13542] FATAL VT - NULL
+Thu Oct 15 04:24:37 2020,308 [13542] FATAL VT - Documents_22
