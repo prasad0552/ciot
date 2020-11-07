@@ -400,29 +400,29 @@ body {
   line-height: 40px;
 }
 .app-SALES {
-  background: #3CB878 !important;
+  background: #EF5E29 !important;
 }
 .app-MARKETING {
   background: #EF5E29 !important;
 }
 .app-OTHER {
-  background: #56ccc8 !important;
+  background: #EF5E29 !important;
 }
 .app-SUPPORT {
-  background: #6297C3 !important;
+  background: #EF5E29 !important;
 }
 .app-INVENTORY {
-  background: #F1C40F !important;
+  background: #EF5E29 !important;
 }
 .app-PROJECT {
-  background: #8E44AD !important;
+  background: #EF5E29 !important;
 }
 .app-TOOLS {
   background: #EF5E29 !important;
 }
 .app-DEFAULT,
 .app-DASHBOARD {
-  background: #56ccc8 !important;
+  background: #EF5E29 !important;
 }
 .module-nav .mod-switcher-container {
   display: inline-block;
