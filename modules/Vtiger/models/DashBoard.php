@@ -71,6 +71,7 @@ class Vtiger_DashBoard_Model extends Vtiger_Base_Model {
 		$params[] = 'Mini List';
 		$params[] = 'Notebook';
 		$result = $db->pquery($sql, $params);
+        print_r($db->convert2Sql($sql, $params));
 
 		$widgets = array();
 		for($i=0; $i<$db->num_rows($result); $i++) {
