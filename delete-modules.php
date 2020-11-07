@@ -8,11 +8,11 @@ $module = Vtiger_Module::getInstance('Contacts');
 if ($module)
     $module->delete();
 
-$module = Vtiger_Module::getInstance('Opportunities');
+$module = Vtiger_Module::getInstance('Potentials');
 if ($module)
     $module->delete();
 
-$module = Vtiger_Module::getInstance('Organizations');
+$module = Vtiger_Module::getInstance('Accounts');
 if ($module)
     $module->delete();
 
@@ -21,5 +21,39 @@ if ($module)
     $module->delete();
 
 $module = Vtiger_Module::getInstance('Products');
+if ($module)
+    $module->delete();
+
+$module = Vtiger_Module::getInstance('Vendors');
+if ($module)
+    $module->delete();
+
+
+$module = Vtiger_Module::getInstance('PriceBooks');
+if ($module)
+    $module->delete();
+
+
+$module = Vtiger_Module::getInstance('Quotes');
+if ($module)
+    $module->delete();
+
+$module = Vtiger_Module::getInstance('PurchaseOrder');
+if ($module)
+    $module->delete();
+
+$module = Vtiger_Module::getInstance('SalesOrder');
+if ($module)
+    $module->delete();
+
+$module = Vtiger_Module::getInstance('Invoice');
+if ($module)
+    $module->delete();
+
+$module = Vtiger_Module::getInstance('Campaigns');
+if ($module)
+    $module->delete();
+
+$module = Vtiger_Module::getInstance('Rss');
 if ($module)
     $module->delete();
