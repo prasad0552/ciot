@@ -111,7 +111,6 @@ class Vtiger_DashBoard_Model extends Vtiger_Base_Model {
 		}
 
 		$result = $db->pquery($sql, $params);
-        print_r($db->convert2Sql($sql, $params));
 
 		$widgets = array();
 
