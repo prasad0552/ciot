@@ -145,8 +145,8 @@ body {
     top: 0;
     left: 0;
     min-height: 100%;
-    background-color: #2C3B49;
-    background: #2C3B49;
+    background-color: darkgreen;
+    background: darkgreen;
   }
   .main-container .sidebar-essentials {
     display: inline-block;
@@ -181,8 +181,8 @@ body {
   margin-left: 5px;
 }
 .vt-notification {
-  background-color: #2C3B49;
-  border-color: #2C3B49;
+  background-color: darkgreen;
+  border-color: darkgreen;
   padding: 10px 15px;
   font-size: 15px;
   position: fixed !important;
@@ -442,7 +442,7 @@ body {
   background-color: #010101 !important;
 }
 .app-switcher-container .app-navigator {
-  background-color: #2C3B49;
+  background-color: darkgreen;
 }
 .app-switcher-container .app-navigator .app-icon {
   color: white;
@@ -476,7 +476,7 @@ body {
   border: 0;
   top: 0px !important;
   box-shadow: 0px 5px 14px #555;
-  background: #2C3B49;
+  background: darkgreen;
   z-index: 1102;
   display: none;
 }
@@ -585,7 +585,7 @@ a.menu-item:hover {
   height: 100vh;
   font-size: 1.2em;
   overflow-x: hidden;
-  background-color: #2C3B49;
+  background-color: darkgreen;
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -918,7 +918,7 @@ input[type="password"].inputElement {
   width: 100%;
   height: 100%;
   float: left;
-  background: #2C3B49;
+  background: darkgreen;
   position: absolute;
   z-index: 10;
   left: 0;
@@ -3256,7 +3256,7 @@ th {
   color: #FFFFFF;
 }
 .settingsgroup div.panel-collapse {
-  background-color: #2C3B49;
+  background-color: darkgreen;
 }
 .settingsgroup-accordion {
   color: #FFFFFF;
@@ -3274,11 +3274,11 @@ th {
   text-transform: uppercase;
 }
 .settingsgroup {
-  background: #2C3B49;
+  background: darkgreen;
   height: 100%;
 }
 .settingsgroup .panel-group .panel {
-  background-color: #2C3B49;
+  background-color: darkgreen;
 }
 .userDefaultIcon {
   font-size: 30px;
@@ -5754,7 +5754,7 @@ TN-34230 .row .nav > li > a:hover {
   margin: 20px 0px 20px 0px;
 }
 .highLightMail {
-  background-color: #2C3B49;
+  background-color: darkgreen;
 }
 .whiteFont {
   color: #FFFFFF;
@@ -5983,7 +5983,7 @@ div.tooltip-inner {
   font-size: 2em;
 }
 .menuEditorModuleItem {
-  background: #2C3B49;
+  background: darkgreen;
   border-bottom: 1px solid #DDDDDD;
   cursor: move;
 }
@@ -7166,7 +7166,7 @@ input:focus:-ms-input-placeholder {
 }
 #OnBoardLayout #OnBoardPageContainer .step-tracker {
   padding: 1%;
-  background: #2C3B49;
+  background: darkgreen;
   min-height: 100px;
   width: 100%;
   z-index: 1;
@@ -7257,7 +7257,7 @@ input:focus:-ms-input-placeholder {
   padding: 1%;
 }
 #OnBoardLayout #OnBoardPageContainer .crmGoals .item:hover {
-  border-color: #2C3B49;
+  border-color: darkgreen;
 }
 #OnBoardLayout #OnBoardPageContainer .crmGoals .item:hover p {
   opacity: 1;
@@ -7293,7 +7293,7 @@ input:focus:-ms-input-placeholder {
   margin-top: 10px;
 }
 #OnBoardLayout #OnBoardPageContainer .PickRoles .item {
-  border: 1px solid #2C3B49;
+  border: 1px solid darkgreen;
   height: 100px;
   cursor: pointer;
   text-align: center;
