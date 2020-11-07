@@ -82,7 +82,7 @@ class Vtiger_DashBoard_Model extends Vtiger_Base_Model {
 					continue;
 				}
 			}
-			if($this->checkModulePermission($row)) {
+			if($row && $this->checkModulePermission($row)) {
 				$widgets[] = Vtiger_Widget_Model::getInstanceFromValues($row);
 			}
 		}
