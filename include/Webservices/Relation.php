@@ -19,4 +19,3 @@ function GetRelatedList($module,$relatedmodule,$focus,$query,$button,$returnset,
 function GetHistory($parentmodule,$query,$id){
     return array('query' => $query);
 }
-?>
