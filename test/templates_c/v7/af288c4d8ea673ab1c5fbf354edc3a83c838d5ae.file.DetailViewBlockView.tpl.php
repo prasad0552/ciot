@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2020-06-24 16:08:08
+<?php /* Smarty version Smarty-3.1.7, created on 2020-11-07 18:55:59
          compiled from "/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Users/DetailViewBlockView.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:3127154035ef37a680e4e20-89710204%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'af288c4d8ea673ab1c5fbf354edc3a83c838d5ae' => 
     array (
       0 => '/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Users/DetailViewBlockView.tpl',
-      1 => 1593008135,
+      1 => 1604756375,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.7',
+  'unifunc' => 'content_5ef37a6814d9a',
   'variables' => 
   array (
     'DAY_STARTS' => 0,
@@ -41,8 +43,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'FIELD_VALUE' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.7',
-  'unifunc' => 'content_5ef37a6814d9a',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ef37a6814d9a')) {function content_5ef37a6814d9a($_smarty_tpl) {?>
 
@@ -117,5 +117,4 @@ _detailView_fieldValue_<?php echo $_smarty_tpl->tpl_vars['FIELD_MODEL']->value->
 "></td><td class="<?php echo $_smarty_tpl->tpl_vars['WIDTHTYPE']->value;?>
 "></td><?php }?><?php } ?><?php if (end($_smarty_tpl->tpl_vars['FIELD_MODEL_LIST']->value)==true&&count($_smarty_tpl->tpl_vars['FIELD_MODEL_LIST']->value)!=1&&$_smarty_tpl->tpl_vars['COUNTER']->value==1){?><td class="fieldLabel <?php echo $_smarty_tpl->tpl_vars['WIDTHTYPE']->value;?>
 "></td><td class="<?php echo $_smarty_tpl->tpl_vars['WIDTHTYPE']->value;?>
-"></td><?php }?></tr></tbody></table></div></div><br><?php }?><?php } ?>
-<?php }} ?>
+"></td><?php }?></tr></tbody></table></div></div><br><?php }?><?php } ?><?php }} ?>

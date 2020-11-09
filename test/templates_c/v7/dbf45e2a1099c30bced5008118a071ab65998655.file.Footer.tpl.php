@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2020-06-24 17:33:23
+<?php /* Smarty version Smarty-3.1.7, created on 2020-11-07 16:51:48
          compiled from "/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Vtiger/Footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:21253073195ef370d672d2d2-33753778%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dbf45e2a1099c30bced5008118a071ab65998655' => 
     array (
       0 => '/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Vtiger/Footer.tpl',
-      1 => 1593019997,
+      1 => 1604756375,
       2 => 'file',
     ),
   ),
@@ -27,8 +27,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 <footer class="app-footer">
 	<p>
-		Powered by sciltech - ©<?php echo date('Y');?>
-
+		Powered by SCILTECH - &nbsp;&nbsp;© <?php echo date('Y');?>
+&nbsp;&nbsp;
 	</p>
 </footer>
 </div>

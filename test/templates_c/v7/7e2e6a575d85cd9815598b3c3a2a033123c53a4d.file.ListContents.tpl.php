@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2020-07-25 05:00:44
+<?php /* Smarty version Smarty-3.1.7, created on 2020-11-07 17:19:46
          compiled from "/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Settings/ModuleManager/ListContents.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:15234602775f1bbc7cefea82-65759764%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7e2e6a575d85cd9815598b3c3a2a033123c53a4d' => 
     array (
       0 => '/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Settings/ModuleManager/ListContents.tpl',
-      1 => 1593008135,
+      1 => 1604769573,
       2 => 'file',
     ),
   ),
@@ -15,11 +15,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.7',
+  'unifunc' => 'content_5f1bbc7d03896',
   'variables' => 
   array (
     'QUALIFIED_MODULE' => 0,
-    'IMPORT_USER_MODULE_FROM_FILE_URL' => 0,
-    'IMPORT_MODULE_URL' => 0,
     'ALL_MODULES' => 0,
     'MODULE_MODEL' => 0,
     'COUNTER' => 0,
@@ -31,18 +31,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'SETTINGS_LINK' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.7',
-  'unifunc' => 'content_5f1bbc7d03896',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5f1bbc7d03896')) {function content_5f1bbc7d03896($_smarty_tpl) {?>
 
 
 <div class="listViewPageDiv detailViewContainer" id="moduleManagerContents"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 "><div id="listview-actions" class="listview-actions-container"><div class="clearfix"><h4 class="pull-left"><?php echo vtranslate('LBL_MODULE_MANAGER',$_smarty_tpl->tpl_vars['QUALIFIED_MODULE']->value);?>
-</h4><div class="pull-right"><div class="btn-group"><button class="btn btn-default" type="button" onclick='window.location.href="<?php echo $_smarty_tpl->tpl_vars['IMPORT_USER_MODULE_FROM_FILE_URL']->value;?>
-"'><?php echo vtranslate('LBL_IMPORT_MODULE_FROM_ZIP',$_smarty_tpl->tpl_vars['QUALIFIED_MODULE']->value);?>
-</button></div>&nbsp;<div class="btn-group"><button class="btn btn-default" type="button" onclick='window.location.href = "<?php echo $_smarty_tpl->tpl_vars['IMPORT_MODULE_URL']->value;?>
-"'><?php echo vtranslate('LBL_EXTENSION_STORE','Settings:ExtensionStore');?>
-</button></div></div></div><br><div class="contents"><?php $_smarty_tpl->tpl_vars['COUNTER'] = new Smarty_variable(0, null, 0);?><table class="table table-bordered modulesTable"><tr><?php  $_smarty_tpl->tpl_vars['MODULE_MODEL'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['MODULE_MODEL']->_loop = false;
+</h4><div class="pull-right"></div></div><br><div class="contents"><?php $_smarty_tpl->tpl_vars['COUNTER'] = new Smarty_variable(0, null, 0);?><table class="table table-bordered modulesTable"><tr><?php  $_smarty_tpl->tpl_vars['MODULE_MODEL'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['MODULE_MODEL']->_loop = false;
  $_smarty_tpl->tpl_vars['MODULE_ID'] = new Smarty_Variable;
  $_from = $_smarty_tpl->tpl_vars['ALL_MODULES']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['MODULE_MODEL']->key => $_smarty_tpl->tpl_vars['MODULE_MODEL']->value){

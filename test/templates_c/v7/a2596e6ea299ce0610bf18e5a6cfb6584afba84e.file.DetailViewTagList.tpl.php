@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2020-06-24 15:35:12
+<?php /* Smarty version Smarty-3.1.7, created on 2020-11-07 17:20:12
          compiled from "/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Vtiger/DetailViewTagList.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:14884055305ef372b0059b34-29462076%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a2596e6ea299ce0610bf18e5a6cfb6584afba84e' => 
     array (
       0 => '/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Vtiger/DetailViewTagList.tpl',
-      1 => 1593008135,
+      1 => 1604769078,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.7',
+  'unifunc' => 'content_5ef372b00774b',
   'variables' => 
   array (
     'TAGS_LIST' => 0,
@@ -23,8 +25,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'RECORD' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.7',
-  'unifunc' => 'content_5ef372b00774b',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ef372b00774b')) {function content_5ef372b00774b($_smarty_tpl) {?>
 <div class="tagContainer">
@@ -54,12 +54,6 @@ $_smarty_tpl->tpl_vars['TAG_MODEL']->_loop = true;
             </a>
         </div>
     </div>
-
-
-
-
-
-
     <div class="viewAllTagsContainer hide">
         <div class="modal-dialog">
             <div class="modal-content" style="min-height:200px">

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2020-06-24 15:35:12
+<?php /* Smarty version Smarty-3.1.7, created on 2020-11-07 16:58:21
          compiled from "/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Vtiger/DetailViewBlockView.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:19028078145ef372b00f11d6-41117431%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3b7ef1fd236d566409a9ef789ca64237b362c8c8' => 
     array (
       0 => '/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Vtiger/DetailViewBlockView.tpl',
-      1 => 1593008135,
+      1 => 1604756375,
       2 => 'file',
     ),
   ),
@@ -15,10 +15,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.7',
+  'unifunc' => 'content_5ef372b015e9d',
   'variables' => 
   array (
     'PICKIST_DEPENDENCY_DATASOURCE' => 0,
-    'FIELD_DEPENDENCY_DATASOURCE' => 0,
     'RECORD_STRUCTURE' => 0,
     'BLOCK_LABEL_KEY' => 0,
     'BLOCK_LIST' => 0,
@@ -44,14 +45,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'FIELD_VALUE' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.7',
-  'unifunc' => 'content_5ef372b015e9d',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ef372b015e9d')) {function content_5ef372b015e9d($_smarty_tpl) {?>
 
 <?php if (!empty($_smarty_tpl->tpl_vars['PICKIST_DEPENDENCY_DATASOURCE']->value)){?><input type="hidden" name="picklistDependency" value='<?php echo Vtiger_Util_Helper::toSafeHTML($_smarty_tpl->tpl_vars['PICKIST_DEPENDENCY_DATASOURCE']->value);?>
-' /><?php }?><?php if (!empty($_smarty_tpl->tpl_vars['FIELD_DEPENDENCY_DATASOURCE']->value)){?><input type="hidden" name="fieldDependency" value='<?php echo Vtiger_Util_Helper::toSafeHTML($_smarty_tpl->tpl_vars['FIELD_DEPENDENCY_DATASOURCE']->value);?>
-'/><?php }?><?php  $_smarty_tpl->tpl_vars['FIELD_MODEL_LIST'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['FIELD_MODEL_LIST']->_loop = false;
+' /><?php }?><?php  $_smarty_tpl->tpl_vars['FIELD_MODEL_LIST'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['FIELD_MODEL_LIST']->_loop = false;
  $_smarty_tpl->tpl_vars['BLOCK_LABEL_KEY'] = new Smarty_Variable;
  $_from = $_smarty_tpl->tpl_vars['RECORD_STRUCTURE']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['FIELD_MODEL_LIST']->key => $_smarty_tpl->tpl_vars['FIELD_MODEL_LIST']->value){
@@ -127,5 +125,4 @@ _detailView_fieldValue_<?php echo $_smarty_tpl->tpl_vars['FIELD_MODEL']->value->
 "></td><td class="<?php echo $_smarty_tpl->tpl_vars['WIDTHTYPE']->value;?>
 "></td><?php }?><?php } ?><?php if (end($_smarty_tpl->tpl_vars['FIELD_MODEL_LIST']->value)==true&&count($_smarty_tpl->tpl_vars['FIELD_MODEL_LIST']->value)!=1&&$_smarty_tpl->tpl_vars['COUNTER']->value==1){?><td class="fieldLabel <?php echo $_smarty_tpl->tpl_vars['WIDTHTYPE']->value;?>
 "></td><td class="<?php echo $_smarty_tpl->tpl_vars['WIDTHTYPE']->value;?>
-"></td><?php }?></tr></tbody></table></div></div><br><?php } ?>
-<?php }} ?>
+"></td><?php }?></tr></tbody></table></div></div><br><?php } ?><?php }} ?>

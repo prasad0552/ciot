@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2020-06-24 15:34:08
+<?php /* Smarty version Smarty-3.1.7, created on 2020-11-07 16:51:52
          compiled from "/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Vtiger/ListViewContents.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:10964503255ef37270892312-30189530%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '23e5c792096fdbe15d1cfb78ce9f9a36305744a3' => 
     array (
       0 => '/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Vtiger/ListViewContents.tpl',
-      1 => 1593008135,
+      1 => 1604756375,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.7',
+  'unifunc' => 'content_5ef3727093c03',
   'variables' => 
   array (
     'MODULE' => 0,
@@ -74,8 +76,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'SINGLE_MODULE' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.7',
-  'unifunc' => 'content_5ef3727093c03',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ef3727093c03')) {function content_5ef3727093c03($_smarty_tpl) {?>
 
@@ -156,11 +156,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						<th>
 							<?php if (!$_smarty_tpl->tpl_vars['SEARCH_MODE_RESULTS']->value){?>
 					<div class="table-actions">
-
-
-
-
-
+						<div class="dropdown" style="float:left;">
+							<span class="input dropdown-toggle" data-toggle="dropdown" title="<?php echo vtranslate('LBL_CLICK_HERE_TO_SELECT_ALL_RECORDS',$_smarty_tpl->tpl_vars['MODULE']->value);?>
+">
+								<input class="listViewEntriesMainCheckBox" type="checkbox">
+							</span>
+						</div>
 						<?php if ($_smarty_tpl->tpl_vars['MODULE_MODEL']->value->isFilterColumnEnabled()){?>
 							<div id="listColumnFilterContainer">
 								<div class="listColumnFilter <?php if ($_smarty_tpl->tpl_vars['CURRENT_CV_MODEL']->value&&!($_smarty_tpl->tpl_vars['CURRENT_CV_MODEL']->value->isCvEditable())){?>disabled<?php }?>"  
@@ -266,6 +267,7 @@ $_smarty_tpl->tpl_vars['LISTVIEW_ENTRY']->_loop = true;
 						<?php }?>
 						<tr class="listViewEntries" data-id='<?php echo $_smarty_tpl->tpl_vars['DATA_ID']->value;?>
 ' data-recordUrl='<?php echo $_smarty_tpl->tpl_vars['DATA_URL']->value;?>
+&app=<?php echo $_smarty_tpl->tpl_vars['SELECTED_MENU_CATEGORY']->value;?>
 ' id="<?php echo $_smarty_tpl->tpl_vars['MODULE']->value;?>
 _listView_row_<?php echo $_smarty_tpl->getVariable('smarty')->value['foreach']['listview']['index']+1;?>
 " <?php if ($_smarty_tpl->tpl_vars['MODULE']->value=='Calendar'){?>data-recurring-enabled='<?php echo $_smarty_tpl->tpl_vars['LISTVIEW_ENTRY']->value->isRecurringEnabled();?>
@@ -298,6 +300,7 @@ $_smarty_tpl->tpl_vars['LISTVIEW_HEADER']->_loop = true;
 								<span class="value">
 									<?php if (($_smarty_tpl->tpl_vars['LISTVIEW_HEADER']->value->isNameField()==true||$_smarty_tpl->tpl_vars['LISTVIEW_HEADER']->value->get('uitype')=='4')&&$_smarty_tpl->tpl_vars['MODULE_MODEL']->value->isListViewNameFieldNavigationEnabled()==true){?>
 										<a href="<?php echo $_smarty_tpl->tpl_vars['LISTVIEW_ENTRY']->value->getDetailViewUrl();?>
+&app=<?php echo $_smarty_tpl->tpl_vars['SELECTED_MENU_CATEGORY']->value;?>
 "><?php echo $_smarty_tpl->tpl_vars['LISTVIEW_ENTRY']->value->get($_smarty_tpl->tpl_vars['LISTVIEW_HEADERNAME']->value);?>
 </a>
 										<?php if ($_smarty_tpl->tpl_vars['MODULE']->value=='Products'&&$_smarty_tpl->tpl_vars['LISTVIEW_ENTRY']->value->isBundle()){?>

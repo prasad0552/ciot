@@ -49,7 +49,7 @@ if (isset($_SESSION['its4you_tracylog'])) {
 Debugger::$logSeverity = E_ALL & ~E_NOTICE & ~E_WARNING & ~E_DEPRECATED & ~E_USER_DEPRECATED;
 Debugger::$strictMode = E_ALL & ~E_NOTICE & ~E_WARNING & ~E_DEPRECATED & ~E_USER_DEPRECATED; // all errors except deprecated notices
 //Tracy\OutputDebugger::enable();
-//Debugger::enable($tracy_mode, $tracylog_dir);
+Debugger::enable($tracy_mode, $tracylog_dir);
 
 //----------- END ITS4YOU TRACY IMPLEMENTATION -----------
 $webUI = new Vtiger_WebUI();

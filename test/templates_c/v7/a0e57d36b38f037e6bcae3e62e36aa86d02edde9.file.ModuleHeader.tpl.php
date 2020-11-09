@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2020-06-24 16:07:40
+<?php /* Smarty version Smarty-3.1.7, created on 2020-11-07 20:26:32
          compiled from "/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Settings/Vtiger/ModuleHeader.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:19568017265ef37a4cc91e93-72769697%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a0e57d36b38f037e6bcae3e62e36aa86d02edde9' => 
     array (
       0 => '/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Settings/Vtiger/ModuleHeader.tpl',
-      1 => 1593008135,
+      1 => 1604779132,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.7',
+  'unifunc' => 'content_5ef37a4cd0e02',
   'variables' => 
   array (
     'USER_MODEL' => 0,
@@ -31,14 +33,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'BASIC_ACTION' => 0,
     'LISTVIEW_LINKS' => 0,
     'QUALIFIEDMODULE' => 0,
-    'SETTING' => 0,
     'RESTRICTED_MODULE_LIST' => 0,
     'LISTVIEW_BASICACTION' => 0,
     'FIELDS_INFO' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.7',
-  'unifunc' => 'content_5ef37a4cd0e02',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ef37a4cd0e02')) {function content_5ef37a4cd0e02($_smarty_tpl) {?>
 
@@ -84,23 +83,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
  $_from = $_smarty_tpl->tpl_vars['MODULE_BASIC_ACTIONS']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['BASIC_ACTION']->key => $_smarty_tpl->tpl_vars['BASIC_ACTION']->value){
 $_smarty_tpl->tpl_vars['BASIC_ACTION']->_loop = true;
-?><li><?php if ($_smarty_tpl->tpl_vars['BASIC_ACTION']->value->getLabel()=='LBL_IMPORT'){?><?php }else{ ?><button type="button" class="btn addButton btn-default module-buttons"id="<?php echo $_smarty_tpl->tpl_vars['MODULE']->value;?>
+?><li><?php if ($_smarty_tpl->tpl_vars['BASIC_ACTION']->value->getLabel()=='LBL_IMPORT'){?><button id="<?php echo $_smarty_tpl->tpl_vars['MODULE']->value;?>
+_basicAction_<?php echo Vtiger_Util_Helper::replaceSpaceWithUnderScores($_smarty_tpl->tpl_vars['BASIC_ACTION']->value->getLabel());?>
+" type="button" class="btn addButton btn-default module-buttons"<?php if (stripos($_smarty_tpl->tpl_vars['BASIC_ACTION']->value->getUrl(),'javascript:')===0){?>onclick='<?php echo substr($_smarty_tpl->tpl_vars['BASIC_ACTION']->value->getUrl(),strlen("javascript:"));?>
+;'<?php }else{ ?>onclick="Vtiger_Import_Js.triggerImportAction('<?php echo $_smarty_tpl->tpl_vars['BASIC_ACTION']->value->getUrl();?>
+')"<?php }?>><div class="fa <?php echo $_smarty_tpl->tpl_vars['BASIC_ACTION']->value->getIcon();?>
+" aria-hidden="true"></div>&nbsp;&nbsp;<?php echo vtranslate($_smarty_tpl->tpl_vars['BASIC_ACTION']->value->getLabel(),$_smarty_tpl->tpl_vars['MODULE']->value);?>
+</button><?php }else{ ?><button type="button" class="btn addButton btn-default module-buttons"id="<?php echo $_smarty_tpl->tpl_vars['MODULE']->value;?>
 _listView_basicAction_<?php echo Vtiger_Util_Helper::replaceSpaceWithUnderScores($_smarty_tpl->tpl_vars['BASIC_ACTION']->value->getLabel());?>
 "<?php if (stripos($_smarty_tpl->tpl_vars['BASIC_ACTION']->value->getUrl(),'javascript:')===0){?>onclick='<?php echo substr($_smarty_tpl->tpl_vars['BASIC_ACTION']->value->getUrl(),strlen("javascript:"));?>
 ;'<?php }else{ ?>onclick='window.location.href="<?php echo $_smarty_tpl->tpl_vars['BASIC_ACTION']->value->getUrl();?>
 "'<?php }?>><div class="fa <?php echo $_smarty_tpl->tpl_vars['BASIC_ACTION']->value->getIcon();?>
 " aria-hidden="true"></div>&nbsp;&nbsp;<?php echo vtranslate($_smarty_tpl->tpl_vars['BASIC_ACTION']->value->getLabel(),$_smarty_tpl->tpl_vars['MODULE']->value);?>
-</button><?php }?></li><?php } ?><?php if (count($_smarty_tpl->tpl_vars['LISTVIEW_LINKS']->value['LISTVIEWSETTING'])>0){?><?php if (empty($_smarty_tpl->tpl_vars['QUALIFIEDMODULE']->value)){?><?php $_smarty_tpl->tpl_vars['QUALIFIEDMODULE'] = new Smarty_variable($_smarty_tpl->tpl_vars['MODULE']->value, null, 0);?><?php }?><li><div class="settingsIcon"><button type="button" class="btn btn-default module-buttons dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="<?php echo vtranslate('LBL_SETTINGS',$_smarty_tpl->tpl_vars['MODULE']->value);?>
-"><span class="fa fa-wrench" aria-hidden="true"></span>&nbsp; <span class="caret"></span></button><ul class="detailViewSetting dropdown-menu"><?php  $_smarty_tpl->tpl_vars['SETTING'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['SETTING']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['LISTVIEW_LINKS']->value['LISTVIEWSETTING']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['SETTING']->key => $_smarty_tpl->tpl_vars['SETTING']->value){
-$_smarty_tpl->tpl_vars['SETTING']->_loop = true;
-?><li id="<?php echo $_smarty_tpl->tpl_vars['MODULE']->value;?>
-_setings_lisview_advancedAction_<?php echo $_smarty_tpl->tpl_vars['SETTING']->value->getLabel();?>
-"><a	<?php if (stripos($_smarty_tpl->tpl_vars['SETTING']->value->getUrl(),'javascript:')===0){?>onclick='<?php echo substr($_smarty_tpl->tpl_vars['SETTING']->value->getUrl(),strlen("javascript:"));?>
-;'<?php }else{ ?>href="<?php echo $_smarty_tpl->tpl_vars['SETTING']->value->getUrl();?>
-"<?php }?>><?php echo vtranslate($_smarty_tpl->tpl_vars['SETTING']->value->getLabel(),$_smarty_tpl->tpl_vars['QUALIFIEDMODULE']->value);?>
-</a></li><?php } ?></ul></div></li><?php }?><?php $_smarty_tpl->tpl_vars['RESTRICTED_MODULE_LIST'] = new Smarty_variable(array('Users','EmailTemplates'), null, 0);?><?php if (count($_smarty_tpl->tpl_vars['LISTVIEW_LINKS']->value['LISTVIEWBASIC'])>0&&!in_array($_smarty_tpl->tpl_vars['MODULE']->value,$_smarty_tpl->tpl_vars['RESTRICTED_MODULE_LIST']->value)){?><?php if (empty($_smarty_tpl->tpl_vars['QUALIFIED_MODULE']->value)){?><?php $_smarty_tpl->tpl_vars['QUALIFIED_MODULE'] = new Smarty_variable(('Settings:').($_smarty_tpl->tpl_vars['MODULE']->value), null, 0);?><?php }?><?php  $_smarty_tpl->tpl_vars['LISTVIEW_BASICACTION'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['LISTVIEW_BASICACTION']->_loop = false;
+</button><?php }?></li><?php } ?><?php if (count($_smarty_tpl->tpl_vars['LISTVIEW_LINKS']->value['LISTVIEWSETTING'])>0){?><?php if (empty($_smarty_tpl->tpl_vars['QUALIFIEDMODULE']->value)){?><?php $_smarty_tpl->tpl_vars['QUALIFIEDMODULE'] = new Smarty_variable($_smarty_tpl->tpl_vars['MODULE']->value, null, 0);?><?php }?><?php }?><?php $_smarty_tpl->tpl_vars['RESTRICTED_MODULE_LIST'] = new Smarty_variable(array('Users','EmailTemplates'), null, 0);?><?php if (count($_smarty_tpl->tpl_vars['LISTVIEW_LINKS']->value['LISTVIEWBASIC'])>0&&!in_array($_smarty_tpl->tpl_vars['MODULE']->value,$_smarty_tpl->tpl_vars['RESTRICTED_MODULE_LIST']->value)){?><?php if (empty($_smarty_tpl->tpl_vars['QUALIFIED_MODULE']->value)){?><?php $_smarty_tpl->tpl_vars['QUALIFIED_MODULE'] = new Smarty_variable(('Settings:').($_smarty_tpl->tpl_vars['MODULE']->value), null, 0);?><?php }?><?php  $_smarty_tpl->tpl_vars['LISTVIEW_BASICACTION'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['LISTVIEW_BASICACTION']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['LISTVIEW_LINKS']->value['LISTVIEWBASIC']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['LISTVIEW_BASICACTION']->key => $_smarty_tpl->tpl_vars['LISTVIEW_BASICACTION']->value){
 $_smarty_tpl->tpl_vars['LISTVIEW_BASICACTION']->_loop = true;

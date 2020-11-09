@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2020-06-24 17:13:06
+<?php /* Smarty version Smarty-3.1.7, created on 2020-11-07 18:22:15
          compiled from "/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Vtiger/EditView.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:20153419825ef389a28f8e79-64128030%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '25e4d31a09680eeb92e93d13e14c42dd97946b9b' => 
     array (
       0 => '/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Vtiger/EditView.tpl',
-      1 => 1593008135,
+      1 => 1604756375,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.7',
+  'unifunc' => 'content_5ef389a29254d',
   'variables' => 
   array (
     'MODULE' => 0,
@@ -25,6 +27,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'USER_MODEL' => 0,
     'IS_PARENT_EXISTS' => 0,
     'SPLITTED_MODULE' => 0,
+    'SELECTED_MENU_CATEGORY' => 0,
     'IS_RELATION_OPERATION' => 0,
     'SOURCE_MODULE' => 0,
     'SOURCE_RECORD' => 0,
@@ -47,8 +50,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'DUPLICATE_RECORDS' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.7',
-  'unifunc' => 'content_5ef389a29254d',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ef389a29254d')) {function content_5ef389a29254d($_smarty_tpl) {?>
 
@@ -68,7 +69,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 " /><?php }?><input type="hidden" name="action" value="Save" /><input type="hidden" name="record" value="<?php echo $_smarty_tpl->tpl_vars['RECORD_ID']->value;?>
 " /><input type="hidden" name="defaultCallDuration" value="<?php echo $_smarty_tpl->tpl_vars['USER_MODEL']->value->get('callduration');?>
 " /><input type="hidden" name="defaultOtherEventDuration" value="<?php echo $_smarty_tpl->tpl_vars['USER_MODEL']->value->get('othereventduration');?>
-" /><input type="hidden" name="appName" value="" /><?php if ($_smarty_tpl->tpl_vars['IS_RELATION_OPERATION']->value){?><input type="hidden" name="sourceModule" value="<?php echo $_smarty_tpl->tpl_vars['SOURCE_MODULE']->value;?>
+" /><input type="hidden" name="appName" value="&app=<?php echo $_smarty_tpl->tpl_vars['SELECTED_MENU_CATEGORY']->value;?>
+" /><?php if ($_smarty_tpl->tpl_vars['IS_RELATION_OPERATION']->value){?><input type="hidden" name="sourceModule" value="<?php echo $_smarty_tpl->tpl_vars['SOURCE_MODULE']->value;?>
 " /><input type="hidden" name="sourceRecord" value="<?php echo $_smarty_tpl->tpl_vars['SOURCE_RECORD']->value;?>
 " /><input type="hidden" name="relationOperation" value="<?php echo $_smarty_tpl->tpl_vars['IS_RELATION_OPERATION']->value;?>
 " /><?php }?><?php if ($_smarty_tpl->tpl_vars['RETURN_VIEW']->value){?><input type="hidden" name="returnmodule" value="<?php echo $_smarty_tpl->tpl_vars['RETURN_MODULE']->value;?>

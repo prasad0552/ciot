@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2020-06-24 15:34:08
+<?php /* Smarty version Smarty-3.1.7, created on 2020-11-07 16:51:52
          compiled from "/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Vtiger/partials/Menubar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:5115706385ef37270799222-73900291%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8294b2810f02cdbb2d117824cdc2cb95f0c1fa73' => 
     array (
       0 => '/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Vtiger/partials/Menubar.tpl',
-      1 => 1593008135,
+      1 => 1604756375,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.7',
+  'unifunc' => 'content_5ef372707a719',
   'variables' => 
   array (
     'MENU_STRUCTURE' => 0,
@@ -23,10 +25,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'moduleName' => 0,
     'translatedModuleLabel' => 0,
     'MODULE' => 0,
+    'SELECTED_MENU_CATEGORY' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.7',
-  'unifunc' => 'content_5ef372707a719',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ef372707a719')) {function content_5ef372707a719($_smarty_tpl) {?>
 
@@ -47,6 +48,7 @@ $_smarty_tpl->tpl_vars['moduleModel']->_loop = true;
 " class="module-qtip">
 			<li <?php if ($_smarty_tpl->tpl_vars['MODULE']->value==$_smarty_tpl->tpl_vars['moduleName']->value){?>class="active"<?php }else{ ?>class=""<?php }?>>
 				<a href="<?php echo $_smarty_tpl->tpl_vars['moduleModel']->value->getDefaultUrl();?>
+&app=<?php echo $_smarty_tpl->tpl_vars['SELECTED_MENU_CATEGORY']->value;?>
 ">
 					<?php echo $_smarty_tpl->tpl_vars['moduleModel']->value->getModuleIcon();?>
 

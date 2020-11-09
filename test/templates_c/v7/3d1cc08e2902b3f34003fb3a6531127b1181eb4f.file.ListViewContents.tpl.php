@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2020-06-24 16:07:40
+<?php /* Smarty version Smarty-3.1.7, created on 2020-11-07 20:32:26
          compiled from "/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Users/ListViewContents.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:6449787935ef37a4cd85757-40263448%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3d1cc08e2902b3f34003fb3a6531127b1181eb4f' => 
     array (
       0 => '/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Users/ListViewContents.tpl',
-      1 => 1593008135,
+      1 => 1604779132,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.7',
+  'unifunc' => 'content_5ef37a4cdd8b4',
   'variables' => 
   array (
     'LISTVIEW_ENTRIES_COUNT' => 0,
@@ -43,16 +45,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'LISTVIEW_ENTRY' => 0,
     'LISTVIEW_HEADERNAME' => 0,
     'LISTVIEW_ENTRY_RAWVALUE' => 0,
-    'IMAGE_DETAILS' => 0,
-    'IMAGE_INFO' => 0,
     'WIDTHTYPE' => 0,
     'COLSPAN_WIDTH' => 0,
     'SEARCH_VALUE' => 0,
     'IS_MODULE_EDITABLE' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.7',
-  'unifunc' => 'content_5ef37a4cdd8b4',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ef37a4cdd8b4')) {function content_5ef37a4cdd8b4($_smarty_tpl) {?>
 
@@ -110,12 +108,7 @@ $_smarty_tpl->tpl_vars['LISTVIEW_HEADER']->_loop = true;
 ?><?php $_smarty_tpl->tpl_vars['LISTVIEW_HEADERNAME'] = new Smarty_variable($_smarty_tpl->tpl_vars['LISTVIEW_HEADER']->value->get('name'), null, 0);?><?php $_smarty_tpl->tpl_vars['LISTVIEW_ENTRY_RAWVALUE'] = new Smarty_variable($_smarty_tpl->tpl_vars['LISTVIEW_ENTRY']->value->getRaw($_smarty_tpl->tpl_vars['LISTVIEW_HEADER']->value->get('column')), null, 0);?><?php $_smarty_tpl->tpl_vars['LISTVIEW_ENTRY_VALUE'] = new Smarty_variable($_smarty_tpl->tpl_vars['LISTVIEW_ENTRY']->value->get($_smarty_tpl->tpl_vars['LISTVIEW_HEADERNAME']->value), null, 0);?><?php if ($_smarty_tpl->tpl_vars['LISTVIEW_HEADER']->value->getName()=='first_name'){?><td data-name="<?php echo $_smarty_tpl->tpl_vars['LISTVIEW_HEADER']->value->get('name');?>
 " data-rawvalue="<?php echo $_smarty_tpl->tpl_vars['LISTVIEW_ENTRY_RAWVALUE']->value;?>
 " data-type="<?php echo $_smarty_tpl->tpl_vars['LISTVIEW_HEADER']->value->getFieldDataType();?>
-"><span class="fieldValue"><span class="value textOverflowEllipsis"><div style="margin-left: -13px;"><?php $_smarty_tpl->tpl_vars['IMAGE_DETAILS'] = new Smarty_variable($_smarty_tpl->tpl_vars['LISTVIEW_ENTRY']->value->getImageDetails(), null, 0);?><?php  $_smarty_tpl->tpl_vars['IMAGE_INFO'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['IMAGE_INFO']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['IMAGE_DETAILS']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['IMAGE_INFO']->key => $_smarty_tpl->tpl_vars['IMAGE_INFO']->value){
-$_smarty_tpl->tpl_vars['IMAGE_INFO']->_loop = true;
-?><?php if (!empty($_smarty_tpl->tpl_vars['IMAGE_INFO']->value['url'])){?><div class='col-lg-2'><img height="25px" width="25px" src="<?php echo $_smarty_tpl->tpl_vars['IMAGE_INFO']->value['url'];?>
-"></div><?php }?><?php } ?><?php if ($_smarty_tpl->tpl_vars['IMAGE_DETAILS']->value[0]['id']==null){?><div class='col-lg-2'><i class="fa fa-user userDefaultIcon"></i></div><?php }?><div class="usersinfo col-lg-9 textOverflowEllipsis" title="<?php echo $_smarty_tpl->tpl_vars['LISTVIEW_ENTRY']->value->get('last_name');?>
+"><span class="fieldValue"><span class="value textOverflowEllipsis"><div style="margin-left: -13px;"><div class="usersinfo col-lg-9 textOverflowEllipsis" title="<?php echo $_smarty_tpl->tpl_vars['LISTVIEW_ENTRY']->value->get('last_name');?>
 "><a href="<?php echo $_smarty_tpl->tpl_vars['LISTVIEW_ENTRY']->value->getDetailViewUrl();?>
 "><?php echo $_smarty_tpl->tpl_vars['LISTVIEW_ENTRY']->value->get($_smarty_tpl->tpl_vars['LISTVIEW_HEADERNAME']->value);?>
  <?php echo $_smarty_tpl->tpl_vars['LISTVIEW_ENTRY']->value->get('last_name');?>
@@ -132,4 +125,5 @@ $_smarty_tpl->tpl_vars['IMAGE_INFO']->_loop = true;
 </a><?php }?><?php }else{ ?><?php echo vtranslate('LBL_NO');?>
  <?php echo vtranslate($_smarty_tpl->tpl_vars['MODULE']->value,$_smarty_tpl->tpl_vars['MODULE']->value);?>
  <?php echo vtranslate('LBL_FOUND');?>
-<?php }?></center></div></td></tr><?php }?></tbody></table></form></div><div id="scroller_wrapper" class="bottom-fixed-scroll"><div id="scroller" class="scroller-div"></div></div><?php }} ?>
+<?php }?></center></div></td></tr><?php }?></tbody></table></form></div><div id="scroller_wrapper" class="bottom-fixed-scroll"><div id="scroller" class="scroller-div"></div></div>
+<?php }} ?>

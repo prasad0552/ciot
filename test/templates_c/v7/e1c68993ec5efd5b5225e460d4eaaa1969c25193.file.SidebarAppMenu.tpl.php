@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2020-06-24 15:27:25
+<?php /* Smarty version Smarty-3.1.7, created on 2020-11-07 16:51:48
          compiled from "/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Vtiger/partials/SidebarAppMenu.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:14265878395ef370ddd30521-76880481%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e1c68993ec5efd5b5225e460d4eaaa1969c25193' => 
     array (
       0 => '/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Vtiger/partials/SidebarAppMenu.tpl',
-      1 => 1593008135,
+      1 => 1604756375,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.7',
+  'unifunc' => 'content_5ef370ddd5aec',
   'variables' => 
   array (
     'DASHBOARD_MODULE_MODEL' => 0,
@@ -35,8 +37,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'USER_MODEL' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.7',
-  'unifunc' => 'content_5ef370ddd5aec',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ef370ddd5aec')) {function content_5ef370ddd5aec($_smarty_tpl) {?>
 
@@ -87,6 +87,7 @@ $_smarty_tpl->tpl_vars['APP_MENU_MODEL']->_loop = true;
 " data-app-name="<?php echo $_smarty_tpl->tpl_vars['APP_NAME']->value;?>
 " id="<?php echo $_smarty_tpl->tpl_vars['APP_NAME']->value;?>
 _modules_dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-default-url="<?php echo $_smarty_tpl->tpl_vars['FIRST_MENU_MODEL']->value->getDefaultUrl();?>
+&app=<?php echo $_smarty_tpl->tpl_vars['APP_NAME']->value;?>
 ">
 							<div class="menu-items-wrapper app-menu-items-wrapper">
 								<span class="app-icon-list fa <?php echo $_smarty_tpl->tpl_vars['APP_IMAGE_MAP']->value[$_smarty_tpl->tpl_vars['APP_NAME']->value];?>
@@ -108,6 +109,7 @@ $_smarty_tpl->tpl_vars['moduleModel']->_loop = true;
 								<?php $_smarty_tpl->tpl_vars['translatedModuleLabel'] = new Smarty_variable(vtranslate($_smarty_tpl->tpl_vars['moduleModel']->value->get('label'),$_smarty_tpl->tpl_vars['moduleName']->value), null, 0);?>
 								<li>
 									<a href="<?php echo $_smarty_tpl->tpl_vars['moduleModel']->value->getDefaultUrl();?>
+&app=<?php echo $_smarty_tpl->tpl_vars['APP_NAME']->value;?>
 " title="<?php echo $_smarty_tpl->tpl_vars['translatedModuleLabel']->value;?>
 ">
 										<span class="module-icon"><?php echo $_smarty_tpl->tpl_vars['moduleModel']->value->getModuleIcon();?>
@@ -144,16 +146,6 @@ $_smarty_tpl->tpl_vars['moduleModel']->_loop = true;
 					</div>
 				</div>
 			<?php }?>
-
-
-
-
-
-
-
-
-
-
 			<?php if ($_smarty_tpl->tpl_vars['USER_MODEL']->value->isAdminUser()){?>
 				<div class="dropdown app-modules-dropdown-container dropdown-compact">
 					<div class="menu-item app-item dropdown-toggle app-item-misc" data-app-name="TOOLS" id="TOOLS_modules_dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-default-url="<?php if ($_smarty_tpl->tpl_vars['USER_MODEL']->value->isAdminUser()){?>index.php?module=Vtiger&parent=Settings&view=Index<?php }else{ ?>index.php?module=Users&view=Settings<?php }?>">
@@ -168,12 +160,6 @@ $_smarty_tpl->tpl_vars['moduleModel']->_loop = true;
 					</div>
 					<ul class="dropdown-menu app-modules-dropdown dropdown-modules-compact" aria-labelledby="<?php echo $_smarty_tpl->tpl_vars['APP_NAME']->value;?>
 _modules_dropdownMenu" data-height="0.27">
-
-
-
-
-
-
 						<li>
 							<a href="?module=Users&parent=Settings&view=List">
 								<span class="fa fa-user module-icon"></span>

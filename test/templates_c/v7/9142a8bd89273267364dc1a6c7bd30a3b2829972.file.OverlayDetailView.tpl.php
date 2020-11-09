@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2020-09-21 09:40:36
+<?php /* Smarty version Smarty-3.1.7, created on 2020-11-07 20:25:30
          compiled from "/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Vtiger/OverlayDetailView.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:4784747915f68751434e1d9-40164375%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9142a8bd89273267364dc1a6c7bd30a3b2829972' => 
     array (
       0 => '/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Vtiger/OverlayDetailView.tpl',
-      1 => 1593008135,
+      1 => 1604756375,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.7',
+  'unifunc' => 'content_5f687514366ff',
   'variables' => 
   array (
     'SCRIPTS' => 0,
@@ -23,13 +25,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'FIELDS_INFO' => 0,
     'MODULE_NAME' => 0,
     'MODULE_MODEL' => 0,
+    'SELECTED_MENU_CATEGORY' => 0,
     'DETAILVIEW_LINKS' => 0,
     'DETAIL_VIEW_BASIC_LINK' => 0,
     'RECORD_STRUCTURE' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.7',
-  'unifunc' => 'content_5f687514366ff',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5f687514366ff')) {function content_5f687514366ff($_smarty_tpl) {?>
 
@@ -91,6 +92,7 @@ $_smarty_tpl->tpl_vars['jsModel']->_loop = true;
                 <div class="clearfix">
                     <div class = "btn-group">
                         <button class="btn btn-default fullDetailsButton" onclick="window.location.href = '<?php echo $_smarty_tpl->tpl_vars['RECORD']->value->getFullDetailViewUrl();?>
+&app=<?php echo $_smarty_tpl->tpl_vars['SELECTED_MENU_CATEGORY']->value;?>
 '"><?php echo vtranslate('LBL_DETAILS',$_smarty_tpl->tpl_vars['MODULE_NAME']->value);?>
 </button>
 						<?php  $_smarty_tpl->tpl_vars['DETAIL_VIEW_BASIC_LINK'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['DETAIL_VIEW_BASIC_LINK']->_loop = false;
@@ -120,5 +122,4 @@ $_smarty_tpl->tpl_vars['DETAIL_VIEW_BASIC_LINK']->_loop = true;
             </div>
         </div>
     </div>
-</div>
-<?php }} ?>
+</div><?php }} ?>

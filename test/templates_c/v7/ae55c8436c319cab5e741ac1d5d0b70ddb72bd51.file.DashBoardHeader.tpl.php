@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2020-06-24 16:07:41
+<?php /* Smarty version Smarty-3.1.7, created on 2020-11-07 17:03:52
          compiled from "/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Vtiger/dashboards/DashBoardHeader.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:16105791845ef370dddec2b4-64290895%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ae55c8436c319cab5e741ac1d5d0b70ddb72bd51' => 
     array (
       0 => '/var/www/html/ciot/includes/runtime/../../layouts/v7/modules/Vtiger/dashboards/DashBoardHeader.tpl',
-      1 => 1593014066,
+      1 => 1604756375,
       2 => 'file',
     ),
   ),
@@ -34,9 +34,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<div class="buttonGroups pull-right">
 		<div class="btn-group">
 			<?php if (count($_smarty_tpl->tpl_vars['SELECTABLE_WIDGETS']->value)>0){?>
-
-
-
+				<button class='btn btn-default addButton dropdown-toggle' data-toggle='dropdown'>
+					<?php echo vtranslate('LBL_ADD_WIDGET');?>
+&nbsp;&nbsp;<i class="caret"></i>
+				</button>
 
 				<ul class="dropdown-menu dropdown-menu-right widgetsList pull-right" style="min-width:100%;text-align:left;">
 					<?php $_smarty_tpl->tpl_vars["MINILISTWIDGET"] = new Smarty_variable('', null, 0);?>
