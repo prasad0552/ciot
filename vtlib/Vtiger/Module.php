@@ -58,6 +58,7 @@ class Vtiger_Module extends Vtiger_ModuleBasic {
 		global $adb;
 
 		if(empty($moduleInstance)) return;
+		if(empty($moduleInstance)) return;
 
 		if(!Vtiger_Utils::CheckTable('vtiger_crmentityrel')) {
 			Vtiger_Utils::CreateTable(
@@ -220,4 +221,3 @@ class Vtiger_Module extends Vtiger_ModuleBasic {
 		}
 	}
 }
-?>
