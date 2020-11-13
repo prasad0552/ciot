@@ -156,10 +156,8 @@ Class Vtiger_Edit_View extends Vtiger_Index_View
         }
 
         $picklistDependencyDatasource = Vtiger_DependencyPicklist::getPicklistDependencyDatasource($moduleName);
-        $fieldDependencyDatasource = Vtiger_DependencyField::getFieldDependencyDatasource($moduleName);
 
         $viewer->assign('PICKIST_DEPENDENCY_DATASOURCE', Vtiger_Functions::jsonEncode($picklistDependencyDatasource));
-        $viewer->assign('FIELD_DEPENDENCY_DATASOURCE', Vtiger_Functions::jsonEncode($fieldDependencyDatasource));
         $viewer->assign('RECORD_STRUCTURE_MODEL', $recordStructureInstance);
         $viewer->assign('RECORD_STRUCTURE', $recordStructureInstance->getStructure());
         $viewer->assign('MODULE', $moduleName);
