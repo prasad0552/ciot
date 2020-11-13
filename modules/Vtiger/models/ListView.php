@@ -75,7 +75,6 @@ class Vtiger_ListView_Model extends Vtiger_Base_Model {
 		}
 
 		if($currentUserModel->isAdminUser()) {
-
 			$settingsLinks = $this->getSettingLinks();
 			foreach($settingsLinks as $settingsLink) {
 				$links['LISTVIEWSETTING'][] = Vtiger_Link_Model::getInstanceFromValues($settingsLink);
