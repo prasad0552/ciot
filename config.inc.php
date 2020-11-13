@@ -50,7 +50,7 @@ $dbconfig['db_server'] = 'localhost';
 $dbconfig['db_port'] = ':3306';
 $dbconfig['db_username'] = 'ciot11052020';
 $dbconfig['db_password'] = ')pr36S]4V9';
-$dbconfig['db_name'] = 'vtig573';
+$dbconfig['db_name'] = 'ciot11092020';
 $dbconfig['db_type'] = 'mysqli';
 $dbconfig['db_status'] = 'true';
 
