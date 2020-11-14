@@ -324,7 +324,9 @@ class Settings_Picklist_Module_Model extends Vtiger_Module_Model {
 						inner join vtiger_field on vtiger_tab.tabid=vtiger_field.tabid
 				  WHERE uitype IN (15,33,16,114) and vtiger_field.tabid NOT IN (". generateQuestionMarks($unsupportedModuleIds) .")  and vtiger_tab.presence != 1 and vtiger_field.presence in (0,2)
 				  ORDER BY vtiger_tab.tabid ASC";
-		$result = $db->pquery($query, $unsupportedModuleIds);
+
+        echo $db->convert2Sql($query, $unsupportedModuleIds);
+        $result = $db->pquery($query, $unsupportedModuleIds);
 
 		$modulesModelsList = array();
 		while($row = $db->fetch_array($result)){
