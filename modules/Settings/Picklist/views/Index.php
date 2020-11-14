@@ -48,15 +48,16 @@ class Settings_Picklist_Index_View extends Settings_Vtiger_Index_View
         } else {
             $viewer->assign('NO_PICKLIST_FIELDS', true);
             $createPicklistUrl = '';
-            $settingsLinks = $moduleModel->getSettingLinks();
-            foreach ($settingsLinks as $linkDetails) {
-                if ($linkDetails['linklabel'] == 'LBL_EDIT_FIELDS') {
-                    $createPicklistUrl = $linkDetails['linkurl'];
-                    break;
+            if ($moduleModel) {
+                $settingsLinks = $moduleModel->getSettingLinks();
+                foreach ($settingsLinks as $linkDetails) {
+                    if ($linkDetails['linklabel'] == 'LBL_EDIT_FIELDS') {
+                        $createPicklistUrl = $linkDetails['linkurl'];
+                        break;
+                    }
                 }
             }
             $viewer->assign('CREATE_PICKLIST_URL', $createPicklistUrl);
-
         }
         $viewer->assign('SELECTED_MODULE_NAME', $sourceModule);
         $viewer->assign('QUALIFIED_NAME', $qualifiedName);
