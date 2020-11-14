@@ -16,7 +16,7 @@
 // Adjust error_reporting favourable to deployment.
 //version_compare(PHP_VERSION, '5.5.0') <= 0 ? error_reporting(E_WARNING & ~E_NOTICE & ~E_DEPRECATED & E_ERROR) : error_reporting(E_WARNING & ~E_NOTICE & ~E_DEPRECATED  & E_ERROR & ~E_STRICT); // PRODUCTION
 ini_set('display_errors', 'on');
-version_compare(PHP_VERSION, '5.5.0') <= 0 ? error_reporting(E_WARNING & ~E_NOTICE & ~E_DEPRECATED) : error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT);   // DEBUGGING
+version_compare(PHP_VERSION, '5.5.0') <= 0 ? error_reporting(E_WARNING & ~E_NOTICE & ~E_DEPRECATED) : error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_WARNING);   // DEBUGGING
 //ini_set('display_errors','on');
 //error_reporting(E_ALL & ~E_DEPRECATED & ~E_STRICT); // STRICT DEVELOPMENT
 
@@ -50,7 +50,7 @@ $dbconfig['db_server'] = 'localhost';
 $dbconfig['db_port'] = ':3306';
 $dbconfig['db_username'] = 'ciot11052020';
 $dbconfig['db_password'] = ')pr36S]4V9';
-$dbconfig['db_name'] = 'ciot11092020';
+$dbconfig['db_name'] = 'vtig573';
 $dbconfig['db_type'] = 'mysqli';
 $dbconfig['db_status'] = 'true';
 

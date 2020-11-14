@@ -384,7 +384,6 @@ class Vtiger_List_View extends Vtiger_Index_View
         $listViewController = $listViewModel->get('listview_controller');
         $selectedHeaderFields = $listViewController->getListViewHeaderFields();
 
-        print_r($selectedHeaderFields);
         $viewer->assign('ORDER_BY', $orderBy);
         $viewer->assign('SORT_ORDER', $sortOrder);
         $viewer->assign('NEXT_SORT_ORDER', $nextSortOrder);
@@ -404,6 +403,7 @@ class Vtiger_List_View extends Vtiger_Index_View
         $viewer->assign('ALL_CUSTOMVIEW_MODEL', CustomView_Record_Model::getAllFilterByModule($moduleName));
         $viewer->assign('CURRENT_TAG', $tag);
         $viewer->assign('SELECTED_MENU_CATEGORY', 'PROJECT');
+
         if (PerformancePrefs::getBoolean('LISTVIEW_COMPUTE_PAGE_COUNT', false)) {
             if (!$this->listViewCount) {
                 $this->listViewCount = $listViewModel->getListViewCount();
