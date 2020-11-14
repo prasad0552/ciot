@@ -44,7 +44,7 @@ abstract class Vtiger_Basic_View extends Vtiger_Footer_View {
 		// Order by pre-defined automation process for QuickCreate.
 		uksort($menuModelsList, array('Vtiger_MenuStructure_Model', 'sortMenuItemsByProcess'));
 
-		$selectedModuleMenuCategory = 'MARKETING';
+		$selectedModuleMenuCategory = 'PROJECT';
 		$moduleFound = false;
 
 		$menuGroupedByParent = Settings_MenuEditor_Module_Model::getAllVisibleModules();

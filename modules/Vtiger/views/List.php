@@ -384,6 +384,7 @@ class Vtiger_List_View extends Vtiger_Index_View
         $listViewController = $listViewModel->get('listview_controller');
         $selectedHeaderFields = $listViewController->getListViewHeaderFields();
 
+        print_r($selectedHeaderFields);
         $viewer->assign('ORDER_BY', $orderBy);
         $viewer->assign('SORT_ORDER', $sortOrder);
         $viewer->assign('NEXT_SORT_ORDER', $nextSortOrder);
