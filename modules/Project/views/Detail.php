@@ -60,8 +60,10 @@ class Project_Detail_View extends Vtiger_Detail_View {
 		
 		$parentRecordModel = Vtiger_Record_Model::getInstanceById($parentId, $moduleName);
 		$relationListView = Vtiger_RelationListView_Model::getInstance($parentRecordModel, $relatedModuleName);
-		$relatedModuleModel = $relationListView->getRelationModel()->getRelationModuleModel();
-		
+		if($relationListView->getRelationModel()) {
+			$relatedModuleModel = $relationListView->getRelationModel()->getRelationModuleModel();
+		}
+
 		if(!empty($orderBy)) {
 			$relationListView->set('orderby', $orderBy);
 			$relationListView->set('sortorder', $sortOrder);
@@ -86,11 +88,11 @@ class Project_Detail_View extends Vtiger_Detail_View {
 		//ProjectTask Progress and Status should show in Projects summary view 
 		if($relatedModuleName == 'ProjectTask') {
 			$fieldModel = Vtiger_Field_Model::getInstance('projecttaskstatus', $relatedModuleInstance);
-			if($fieldModel && $fieldModel->isViewableInDetailView()) {
+			if($relatedModuleModel && $fieldModel && $fieldModel->isViewableInDetailView()) {
 				$header['projecttaskstatus'] = $relatedModuleModel->getField('projecttaskstatus');
 			}
 			$fieldModel = Vtiger_Field_Model::getInstance('projecttaskprogress', $relatedModuleInstance);
-			if($fieldModel && $fieldModel->isViewableInDetailView()) {
+			if($relatedModuleModel && $fieldModel && $fieldModel->isViewableInDetailView()) {
 				$header['projecttaskprogress'] = $relatedModuleModel->getField('projecttaskprogress');
 			}
 		}
