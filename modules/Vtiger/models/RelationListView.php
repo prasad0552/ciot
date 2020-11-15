@@ -415,6 +415,9 @@ class Vtiger_RelationListView_Model extends Vtiger_Base_Model
     public function getHeaders()
     {
         $relationModel = $this->getRelationModel();
+        if(!$relationModel) {
+            return [];
+        }
         $relatedModuleModel = $relationModel->getRelationModuleModel();
 
         $summaryFieldsList = $relatedModuleModel->getHeaderAndSummaryViewFieldsList();
