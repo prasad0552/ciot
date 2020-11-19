@@ -246,5 +246,3 @@ function getAssignedPicklistValues($tableName, $roleid, $adb, $lang = array())
         return $arr;
     }
 }
-
-?>

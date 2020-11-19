@@ -258,7 +258,8 @@ class Vtiger_Field_Model extends Vtiger_Field
 
     public function isRoleBased()
     {
-        if ($this->get('uitype') == '15' || $this->get('uitype') == '33' || ($this->get('uitype') == '55' && $this->getFieldName() == 'salutationtype')) {
+//        $this->get('uitype') == '15' || $this->get('uitype') == '33' ||
+        if (($this->get('uitype') == '55' && $this->getFieldName() == 'salutationtype')) {
             return true;
         }
         return false;
