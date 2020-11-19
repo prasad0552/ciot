@@ -359,13 +359,9 @@ class Vtiger_Record_Model extends Vtiger_Base_Model
                 $leadIdsList[] = $row['crmid'];
             }
         }
-        $convertedInfo = Leads_Module_Model::getConvertedInfo($leadIdsList);
 
         for ($i = 0, $recordsCount = 0; $i < $noOfRows && $recordsCount < 100; ++$i) {
             $row = $db->query_result_rowdata($result, $i);
-            if ($row['setype'] === 'Leads' && $convertedInfo[$row['crmid']]) {
-                continue;
-            }
             if (Users_Privileges_Model::isPermitted($row['setype'], 'DetailView', $row['crmid'])) {
                 $row['id'] = $row['crmid'];
                 $moduleName = $row['setype'];
