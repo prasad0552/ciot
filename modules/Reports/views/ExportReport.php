@@ -102,7 +102,7 @@ class Reports_ExportReport_View extends Vtiger_View_Controller {
 		$userPrivilegesModel = Users_Privileges_Model::getInstanceById($currentUser->getId());
         foreach ($modulesList as $checkModule) {
             $moduleInstance = Vtiger_Module_Model::getInstance($checkModule);
-            $permission = $userPrivilegesModel->hasModulePermission($moduleInstance->getId());
+            $permission = $moduleInstance && $userPrivilegesModel->hasModulePermission($moduleInstance->getId());
             if(!$permission) {
                 $viewer->assign('MODULE', $primaryModule);
                 $viewer->assign('MESSAGE', vtranslate('LBL_PERMISSION_DENIED'));

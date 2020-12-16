@@ -126,9 +126,7 @@ class ListViewSession {
 				$tablename = (($tablename != '')?($tablename."."):'');
 				if(!empty($order_by)){
 				    $list_query .= ' ORDER BY '.$tablename.$order_by.' '.$sorder;
-				}else{
-                    $list_query .= ' ORDER BY '.$default_orderby.'';
-                }
+				}
 			}
 			if($start !=1){
 				$recordCount = ($list_max_entries_per_page * $start + $bufferRecordCount);
