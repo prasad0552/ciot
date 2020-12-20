@@ -451,10 +451,13 @@ class Settings_Profiles_Record_Model extends Settings_Vtiger_Record_Model {
 
 		$allModuleModules = Vtiger_Module_Model::getAll(array(0), Settings_Profiles_Module_Model::getNonVisibleModulesList());
 		$allModuleModules[$eventModule->getId()] = $eventModule;
-		if(count($allModuleModules) > 0) {
+
+
+
+        if(count($allModuleModules) > 0) {
 			$actionModels = Vtiger_Action_Model::getAll(true);
 			foreach($allModuleModules as $tabId => $moduleModel) {
-				if($moduleModel->isActive()) {
+				if($moduleModel && $moduleModel->isActive()) {
 					$this->saveModulePermissions($moduleModel, $profilePermissions[$moduleModel->getId()]);
 				} else {
 					$permissions = array();
@@ -481,7 +484,9 @@ class Settings_Profiles_Record_Model extends Settings_Vtiger_Record_Model {
 					$this->saveModulePermissions($moduleModel, $permissions);
 				}
 			}
-		}
+		} else {
+		    die('$allModuleModules');
+        }
 		if($isNewProfile){
 			$this->saveUserAccessbleFieldsIntoProfile2Field();
 		}
@@ -572,7 +577,7 @@ class Settings_Profiles_Record_Model extends Settings_Vtiger_Record_Model {
 					$i = 0;
 					$count = count($actionsIdsList);
                     $params = array();
-					$actionsInsertQuery .= 'INSERT INTO vtiger_profile2standardpermissions(profileid, tabid, operation, permissions) VALUES ';
+					$actionsInsertQuery = 'INSERT INTO vtiger_profile2standardpermissions(profileid, tabid, operation, permissions) VALUES ';
 					foreach ($actionsIdsList as $actionId => $permission) {
 						$actionEnabled = true;
 						$permissionValue = $this->tranformInputPermissionValue($permission);
