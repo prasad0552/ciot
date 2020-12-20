@@ -65,7 +65,7 @@ class Settings_ITS4YouPicklistImport_IndexAjax_Action extends Settings_Vtiger_In
                 foreach ($row->getCellIterator() as $cell) {
                     $newValue = trim($cell->getCalculatedValue());
                     try {
-                        if ($newValue != "") {
+                        if ($newValue != "" && $moduleModel) {
                             $moduleModel->addPickListValues($fieldModel, $newValue, $rolesSelected);
                         }
                     } catch (Exception $e) {
